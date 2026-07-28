@@ -1,0 +1,26 @@
+PauseSpace — S02 post-session checkpoint
+Captured: 2026-07-28
+
+Post-session commit (HEAD): UNCHANGED from pre-session
+  3e8ef01e1f3843c42f0a98a358890e6a85002562
+  subject: docs: complete S01 baseline freeze
+  branch: main (tracking origin/main)
+
+Nothing S02-related has been committed (left for student review and the
+student's own commit, consistent with how S01 was handled). Uncommitted
+working-tree changes:
+
+  M  TASKS.md                            (S01 checked; S02 activated: prompt + criteria)
+  ?? docs/ResearchProtocol.md            (new: consent, stop rules, neutral questions, checklist)
+  ?? data/sample/interview-notes.json    (new: synthetic note schema, no identifying/clinical data)
+  ?? evidence/S02/                       (new: checkpoint-pre/post, research-checks.txt, validate_research.py)
+
+Rollback to the pre-session checkpoint (discards all S02 changes; nothing
+S02-related was committed):
+  git restore TASKS.md
+  rm -rf docs/ResearchProtocol.md data/sample/interview-notes.json evidence/S02
+
+Acceptance status: technical/delivery criteria (A1, A2) PASS — 14/14 automated
+checks; S01 baseline verified unchanged from 3e8ef01. The manual review gate
+(A3) is student-owned and OPEN — the protocol is "draft, pending student
+role-play and rewrite of any leading/intrusive question."

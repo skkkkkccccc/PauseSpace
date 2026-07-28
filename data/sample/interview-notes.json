@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "synthetic": true,
+  "note": "Synthetic sample only. Not real participant data. This schema intentionally defines no identifying or clinical fields; see docs/ResearchProtocol.md for the data-minimization checklist.",
+  "sessionId": "sample-session-001",
+  "sceneId": "sample-scene",
+  "reviewStatus": "synthetic-sample",
+  "taskObservations": [
+    {
+      "prompt": "Walk me through what you did from the moment the scene started.",
+      "response": "Tapped the start button, watched the scene, then it returned to the menu."
+    },
+    {
+      "prompt": "Was anything hard to see, read, or tap on the phone?",
+      "response": "The start button felt small; the text was easy to read."
+    },
+    {
+      "prompt": "About how long did the scene feel?",
+      "response": "About right, perhaps a little shorter than three minutes."
+    },
+    {
+      "prompt": "If you could change one thing, what would it be?",
+      "response": "Make the start button larger and easier to tap."
+    }
+  ],
+  "usability": {
+    "clarity": "Clear layout; labels were easy to understand.",
+    "tapTargets": "Start button felt small on a phone.",
+    "contrast": "Text contrast looked fine.",
+    "audioClarity": "Audio was clear and easy to hear."
+  },
+  "durationPerception": "about-right",
+  "wouldChange": "Larger start button; keep the simple layout."
+}

@@ -1,0 +1,18 @@
+PauseSpace — S02 pre-session checkpoint
+Captured: 2026-07-28
+
+Pre-session commit (S01 completion, HEAD at start of S02):
+  3e8ef01e1f3843c42f0a98a358890e6a85002562
+  subject: docs: complete S01 baseline freeze
+  branch: main (tracking origin/main)
+
+Working tree at start of S02: CLEAN (git status clean).
+
+S01 re-verified on this checkpoint: evidence/S01/validate_baseline.py = 12/12 PASS.
+S01 acceptance was confirmed by the user ("S01 passed") and by commit 3e8ef01;
+the S01 checkbox has been checked as part of the S01 -> S02 transition.
+
+Rollback target: return TASKS.md and remove S02 artifacts (nothing S02-related
+is committed):
+  git restore TASKS.md
+  rm -rf docs/ResearchProtocol.md data/sample/interview-notes.json evidence/S02

@@ -1,0 +1,30 @@
+########## S02 ETHICAL-RESEARCH ACCEPTANCE CHECKS (re-run) ##########
+# Command: python3 evidence/S02/validate_research.py
+# Captured: 2026-07-28
+#####################################################################
+[PASS] interview-notes.json parses as valid JSON
+[PASS] required schema fields present — all present
+[PASS] sample flagged synthetic=true
+[PASS] no forbidden identifying/clinical KEYS in schema — none
+[PASS] no forbidden clinical/PII terms in sample values — clean
+[PASS] no email/phone patterns in sample values — clean
+[PASS] protocol has section: Assent and consent
+[PASS] protocol has section: Voluntary participation and stop rules
+[PASS] protocol has section: Task questions
+[PASS] protocol has section: Data-minimization checklist
+[PASS] stop rule present (voluntary + stop)
+[PASS] A1 task questions are neutral (no clinical/PII terms in section) — all questions clean
+[PASS] A2 checklist enumerates every forbidden data category — all categories listed
+[PASS] regression: S01 baseline deliverables unchanged from checkpoint 3e8ef01 — no diff (baseline intact)
+
+============================================================
+RESULT: 14/14 checks passed
+============================================================
+
+validator_exit_code=0
+
+########## INDEPENDENT JSON RE-CHECK ##########
+valid JSON; synthetic= True ; fields= 10
+
+########## INDEPENDENT PII/SECRET SCAN OF S02 FILES ##########
+(no email/secret/token patterns found)
