@@ -112,6 +112,7 @@ Stop when S03 acceptance criteria pass and evidence is saved. Do not begin the n
 - Locally approved support contacts; owner: mentor/adult reviewer; next action: approve before S15 release gate.
 
 ## Last Test Evidence
+- **Session state (2026-07-28): PAUSED — S03 is NOT complete.** S03 deliverables are committed (`2907d0f`) and technically verified (14/14 PASS), but the manual sign-off gate (A3) is OPEN: the student must cluster notes, explain counter-evidence, confirm the scene themes (D8), and sign the four-scene decision before S03 is marked complete. Do not begin S04.
 - Automated (S03): `evidence/S03/findings-checks.txt` — 14/14 PASS (validator `evidence/S03/validate_findings.py`, exit 0). Covers 4 scene cards (Need/Evidence/Inference/Risk/Design response), every claim traced to `O-xx` or `[assumption]`, no invented frequency, no clinical/PII data terms, scene decision record present, and S01+S02 regression (git diff vs `fb146e9` = no change).
 - Automated (preserved): S02 `evidence/S02/research-checks.txt` — 14/14 PASS; S01 `evidence/S01/baseline-checks.txt` — 12/12 PASS.
 - Content/data validation (S03): coded observations are anonymized; independent frequency and email/secret/token scans of `docs/ResearchFindings.md` are clean.
