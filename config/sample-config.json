@@ -1,0 +1,6 @@
+{
+  "appName": "PauseSpace",
+  "contentVersion": 1,
+  "progressStorageKey": "pausespace.progress.v1",
+  "supportContentStatus": "mentor-review-required"
+}

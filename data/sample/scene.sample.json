@@ -1,0 +1,11 @@
+{
+  "id": "sample-scene",
+  "title": "Synthetic sample only",
+  "moment": "Non-personal placeholder",
+  "focus": "Concrete sensory cue and next small action",
+  "durationSeconds": 180,
+  "audioSrc": "assets/audio/sample.mp3",
+  "review": {
+    "status": "draft"
+  }
+}
