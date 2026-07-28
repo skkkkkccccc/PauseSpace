@@ -1,0 +1,25 @@
+PauseSpace — S01 post-session checkpoint
+Captured: 2026-07-28
+
+Post-session commit (HEAD): UNCHANGED from pre-session
+  beec278671defc5f06d5f55c0da92abd8271b7af
+  subject: docs: record kickoff environment
+  branch: main (tracking origin/main)
+
+Nothing S01-related has been committed. The S01 deliverables are uncommitted
+working-tree changes awaiting student review and the student's commit:
+
+  M  TASKS.md                 (activated S01: pasted full prompt + observable acceptance criteria)
+  M  docs/ProjectPlan.md      (locked proposal ledger: elements, non-goals, measures, unknowns)
+  ??  docs/Traceability.md     (new: B-01–B-14 traceability ledger)
+  ??  evidence/S01/            (new: checkpoint-pre.txt, checkpoint-post.txt, baseline-checks.txt,
+                               validate_baseline.py)
+
+Rollback to the pre-session checkpoint (discards all S01 changes; evidence is
+also removed, which is acceptable since nothing has been committed):
+  git restore TASKS.md docs/ProjectPlan.md
+  rm -rf docs/Traceability.md evidence/S01
+
+Acceptance status: technical/delivery criteria (A1, A2) PASS (12/12 automated
+checks). The manual approval gate (A3) is student-owned and remains OPEN — the
+baseline is "frozen, pending student approval" until the student signs off.

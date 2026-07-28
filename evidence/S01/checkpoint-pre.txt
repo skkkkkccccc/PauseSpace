@@ -1,0 +1,14 @@
+PauseSpace — S01 pre-session checkpoint
+Captured: 2026-07-28
+
+Pre-session commit (HEAD at start of S01):
+  beec278671defc5f06d5f55c0da92abd8271b7af
+  subject: docs: record kickoff environment
+  branch: main (tracking origin/main, up to date)
+
+Working tree at start of S01: CLEAN (git status --porcelain empty).
+
+This is the rollback target. To discard all S01 working-tree changes and return
+to this checkpoint (nothing S01-related has been committed):
+  git restore TASKS.md docs/ProjectPlan.md
+  rm -rf docs/Traceability.md evidence/S01

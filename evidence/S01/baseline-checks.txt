@@ -1,0 +1,30 @@
+########## S01 BASELINE ACCEPTANCE CHECKS ##########
+# Command: python3 evidence/S01/validate_baseline.py
+# Captured: 2026-07-28
+###################################################
+[PASS] A1a every B-01..B-14 present in Table A (requirement+category+owner+status) — all 14 present
+[PASS] A1b every B-01..B-14 present in Table B (impl path+verification+measure) — all 14 present
+[PASS] A1c all four category labels present (mandatory/recommended/enhancement/out-of-scope) — all present
+[PASS] A2a ProjectPlan locks all eight proposal elements — all 8 locked
+[PASS] A2b ProjectPlan lists explicit non-goals — key non-goals present
+[PASS] A2c README.md boundaries preserved (no silent scope change) — boundaries intact
+[PASS] JSON valid: config/sample-config.json
+[PASS] JSON valid: data/sample/scene.sample.json
+[PASS] TASKS.md S01-S22 checklist intact (22 unchecked units) — 22 units found
+[PASS] TASKS.md current unit is S01
+[PASS] TASKS.md known issues preserved
+[PASS] Pre-session checkpoint recorded (evidence/S01/checkpoint-pre.txt)
+
+============================================================
+RESULT: 12/12 checks passed
+============================================================
+
+validator_exit_code=0
+
+########## INDEPENDENT JSON RE-CHECK ##########
+config/sample-config.json: valid JSON
+data/sample/scene.sample.json: valid JSON
+
+########## TASKS.md checklist count (independent) ##########
+unchecked S-units: 22
+checked   S-units: 0
