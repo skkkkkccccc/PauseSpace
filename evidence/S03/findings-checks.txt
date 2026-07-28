@@ -1,0 +1,30 @@
+########## S03 SCENE-EVIDENCE ACCEPTANCE CHECKS (re-run) ##########
+# Command: python3 evidence/S03/validate_findings.py
+# Captured: 2026-07-28
+###################################################################
+[PASS] docs/ResearchFindings.md exists and is non-empty
+[PASS] card present: Scene 1
+[PASS] Scene 1 has Need/Evidence/Inference/Risk/Design response — all present
+[PASS] card present: Scene 2
+[PASS] Scene 2 has Need/Evidence/Inference/Risk/Design response — all present
+[PASS] card present: Scene 3
+[PASS] Scene 3 has Need/Evidence/Inference/Risk/Design response — all present
+[PASS] card present: Scene 4
+[PASS] Scene 4 has Need/Evidence/Inference/Risk/Design response — all present
+[PASS] every Evidence line traces to O-xx or [assumption] — 4 evidence lines traced
+[PASS] no invented frequency (no counts/%/fractions) — clean
+[PASS] no clinical/PII data terms in findings (boundary disclaimer allowed) — clean
+[PASS] scene decision record present in docs/DecisionLog.md
+[PASS] regression: S01+S02 baseline deliverables unchanged from fb146e9 — no diff (baseline intact)
+
+============================================================
+RESULT: 14/14 checks passed
+============================================================
+
+validator_exit_code=0
+
+########## INDEPENDENT FREQUENCY / PII / SECRET SCAN ##########
+--- frequency patterns (expect none) ---
+(none)
+--- email/secret/token (expect none) ---
+(none)

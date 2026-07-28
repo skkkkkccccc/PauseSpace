@@ -1,0 +1,25 @@
+PauseSpace — S03 post-session checkpoint
+Captured: 2026-07-28
+
+Post-session commit (HEAD): UNCHANGED from pre-session
+  fb146e9922aad642757dafc7a826d2ced92ba94c
+  subject: docs: complete S02 Ethical peer research
+  branch: main (tracking origin/main)
+
+Nothing S03-related has been committed (left for student review and the
+student's own commit, consistent with S01/S02). Uncommitted working-tree changes:
+
+  M  TASKS.md                 (S02 checked; S03 activated: prompt + criteria; evidence updated)
+  M  docs/DecisionLog.md      (scene decision record + S03 decisions; S02-acceptance row)
+  ?? docs/ResearchFindings.md (new: coded observations + 4 scene evidence cards + traceability)
+  ?? evidence/S03/            (new: checkpoint-pre/post, findings-checks.txt, validate_findings.py)
+
+Rollback to the pre-session checkpoint (nothing S03-related was committed):
+  git restore TASKS.md docs/DecisionLog.md
+  rm -rf docs/ResearchFindings.md evidence/S03
+
+Acceptance status: technical/delivery criteria (A1, A2) PASS — 14/14 automated
+checks; S01+S02 baseline verified unchanged from fb146e9. The manual sign-off gate
+(A3) is student-owned and OPEN — the four-scene decision is "pending student
+clustering, counter-evidence explanation, and sign-off." Scene themes are
+candidate assumptions (D8) pending student confirmation against the proposal.
