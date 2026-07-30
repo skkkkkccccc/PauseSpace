@@ -1,0 +1,21 @@
+PauseSpace — S04 pre-session checkpoint
+Captured: 2026-07-30
+
+Pre-session commit (S03 pause checkpoint, HEAD at start of S04):
+  e869ba7e9360cadfa3fb99ff77c8b5371bbf74c0
+  subject: wip: pause S03 at documented checkpoint
+  branch: main (tracking origin/main)
+
+Working tree at start of S04: CLEAN.
+
+S03 re-verified on this checkpoint: evidence/S03/validate_findings.py = 14/14 PASS.
+S03 acceptance was confirmed by the user ("S03 passed") and by commits 2907d0f
+("docs: complete S03 Scene evidence synthesis") + e869ba7 (pause record); the S03
+checkbox has been checked as part of the S03 -> S04 transition.
+
+Note: jsonschema is NOT installed; S04 validation enforces content/schema.json
+manually (see evidence/S04/validate_content.py).
+
+Rollback target (nothing S04-related is committed):
+  git restore TASKS.md docs/CoBuildLog.md docs/DecisionLog.md
+  rm -rf content docs/ContentRubric.md evidence/S04

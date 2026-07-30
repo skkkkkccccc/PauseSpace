@@ -1,0 +1,32 @@
+PauseSpace — S04 post-session checkpoint
+Captured: 2026-07-30
+
+Post-session commit (HEAD): UNCHANGED from pre-session
+  e869ba7e9360cadfa3fb99ff77c8b5371bbf74c0
+  subject: wip: pause S03 at documented checkpoint
+  branch: main (tracking origin/main)
+
+Nothing S04-related has been committed (left for student review and the
+student's own commit, consistent with S01-S03). Uncommitted working-tree changes:
+
+  M  TASKS.md                 (S03 checked; S04 activated: prompt + criteria; evidence updated)
+  M  docs/DecisionLog.md      (S04 decisions; S03-acceptance row)
+  M  docs/CoBuildLog.md       (S04 row; pause banner updated to resumed)
+  ?? content/schema.json       (new: scene-script JSON Schema)
+  ?? docs/ContentRubric.md     (new: choice-language rubric)
+  ?? evidence/S04/             (new: checkpoint-pre/post, content-checks.txt, sample-scene-valid.json, validate_content.py)
+
+Rollback to the pre-session checkpoint (nothing S04-related was committed):
+  git restore TASKS.md docs/DecisionLog.md docs/CoBuildLog.md
+  rm -rf content docs/ContentRubric.md evidence/S04
+
+Acceptance status: technical/delivery criteria (A1, A2) PASS — 10/10 automated
+checks; S01-S03 baseline verified unchanged from e869ba7. The manual gate (A3) is
+student-owned and OPEN — the rubric examples are student-authored and a scene is
+"approved" only after the student applies the rubric line-by-line.
+
+Reprocess (2026-07-30): re-ran evidence/S04/validate_content.py on the staged S04
+deliverables — 10/10 PASS; independent JSON + PII scans clean; S03 still 14/14.
+No deliverable content changes were required. Touched files (TASKS.md,
+docs/DecisionLog.md, docs/CoBuildLog.md, evidence/S04/content-checks.txt,
+evidence/S04/checkpoint-post.txt) were re-staged; nothing was committed.

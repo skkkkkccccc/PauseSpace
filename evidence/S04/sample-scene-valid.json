@@ -1,0 +1,16 @@
+{
+  "id": "sample-scene-valid",
+  "title": "Synthetic sample — green space",
+  "moment": "A short attention-reset during a break",
+  "focus": "Notice one concrete sensory detail",
+  "durationSeconds": 180,
+  "segments": [
+    { "order": 1, "label": "Settle", "startSecond": 0, "endSecond": 30, "optional": false, "text": "You might let your attention rest on the screen for a moment." },
+    { "order": 2, "label": "Notice", "startSecond": 30, "endSecond": 150, "optional": false, "text": "If you like, notice one detail in the scene that you can see or hear." },
+    { "order": 3, "label": "Close", "startSecond": 150, "endSecond": 180, "optional": false, "text": "When you are ready, you can return to the menu." }
+  ],
+  "exit": { "language": "You can stop at any time and return to the menu.", "optional": true },
+  "transcript": { "sameOrigin": true, "text": "Full transcript of the synthetic sample scene." },
+  "audio": { "sameOrigin": true, "src": "assets/audio/sample.mp3", "format": "mp3" },
+  "review": { "status": "approved", "reviewer": "synthetic-sample" }
+}

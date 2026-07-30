@@ -1,0 +1,28 @@
+########## S04 CONTENT-ARCHITECTURE CHECKS — REPROCESS RUN ##########
+# Command: python3 evidence/S04/validate_content.py
+# Captured: 2026-07-30 (reprocess)
+######################################################################
+[PASS] content/schema.json is a parseable JSON Schema
+[PASS] A1 synthetic scene is structurally valid — structure OK
+[PASS] A1 synthetic scene passes timing-budget rules — segments ordered, within duration
+[PASS] A1 synthetic scene is release-ready (approved)
+[PASS] A2 invalid duration (400) fails safely — struct=1 biz=0 release_ready=True
+[PASS] A2 missing exit language fails safely — struct=1 biz=0 release_ready=True
+[PASS] A2 unapproved status (draft) fails safely at release gate — struct=0 biz=0 release_ready=False
+[PASS] A3 rubric encodes command/promise/judgment rules with accepted/rejected examples — all categories present
+[PASS] no email/secret/token patterns in scene fixture
+[PASS] regression: S01-S03 baseline deliverables unchanged from e869ba7 — no diff (baseline intact)
+
+============================================================
+RESULT: 10/10 checks passed
+============================================================
+
+validator_exit_code=0
+
+########## INDEPENDENT RE-CHECKS (reprocess) ##########
+--- schema.json + fixture parse as JSON ---
+both valid JSON
+--- PII/secret scan of S04 deliverables ---
+(no email/secret/token patterns)
+--- S03 still passes (regression of the regression) ---
+============================================================
