@@ -1,0 +1,26 @@
+PauseSpace — S05 post-session checkpoint
+Captured: 2026-07-30
+
+Post-session commit (HEAD): UNCHANGED from pre-session
+  c26478666a3283396dea607096fcf4adfe453b18
+  subject: docs: complete S04 Content architecture
+  branch: main (tracking origin/main)
+
+Nothing S05-related has been committed (left for student review and the
+student's own commit, consistent with prior sessions). Uncommitted changes:
+
+  M  TASKS.md                 (S05 activated: prompt + criteria)
+  ?? content/exam-room.json    (new: exam-room scene script, draft)
+  ?? content/sports-field.json (new: sports-field scene script, draft)
+  ?? evidence/S05/             (new: checkpoint-pre/post, scripts-checks.txt, revision-history.md, validate_scripts.py)
+
+  (DecisionLog.md and docs/CoBuildLog.md will also be modified when the logs are updated.)
+
+Rollback to the pre-session checkpoint (nothing S05-related was committed):
+  git restore TASKS.md docs/DecisionLog.md docs/CoBuildLog.md
+  rm -rf content/exam-room.json content/sports-field.json evidence/S05
+
+Acceptance status: technical/delivery criteria (A1, A2) PASS — 12/12 automated
+checks; S01-S04 baseline verified unchanged from c264786. The manual gate (A3) is
+student-owned and OPEN — the student must rewrite all final wording and perform
+both timed read-alouds; scripts remain review.status=draft until then.

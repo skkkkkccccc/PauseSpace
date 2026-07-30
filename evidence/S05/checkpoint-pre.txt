@@ -1,0 +1,20 @@
+PauseSpace — S05 pre-session checkpoint
+Captured: 2026-07-30
+
+Pre-session commit (S04 completion, HEAD at start of S05):
+  c26478666a3283396dea607096fcf4adfe453b18
+  subject: docs: complete S04 Content architecture
+  branch: main (tracking origin/main, in sync)
+
+Working tree at start of S05: CLEAN.
+
+S04 re-verified on this checkpoint: evidence/S04/validate_content.py = 10/10 PASS.
+S04 acceptance was confirmed by the student (content rubric confirmed correct) and
+committed as c264786; S04 was already checked at the S04 -> S05 transition.
+
+Note: S05 names two concrete scenes — exam-room and sports-field — partially
+resolving open decision D8 (the four scene themes were previously candidates).
+
+Rollback target (nothing S05-related is committed):
+  git restore TASKS.md docs/CoBuildLog.md docs/DecisionLog.md
+  rm -rf content/exam-room.json content/sports-field.json evidence/S05
