@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- PauseSpace low-fidelity mobile prototype (S09). Static, no backend, no
+     external scripts. One clickable vertical slice: scene card -> detail ->
+     player -> completion. Synthetic copy only. scene: exam-room -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PauseSpace — prototype</title>
+  <style>
+    :root { --bg:#f6f4ef; --ink:#1d1d1f; --muted:#6b6b70; --accent:#3a5a40; --card:#ffffff; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink);
+      font: 17px/1.5 -apple-system, system-ui, sans-serif; }
+    .screen { max-width: 420px; margin: 0 auto; min-height: 100vh;
+      padding: 24px 20px 40px; display:none; flex-direction:column; gap:18px; }
+    .screen.active { display:flex; }
+    h1 { font-size: 22px; margin: 8px 0 0; }
+    h2 { font-size: 19px; margin: 0; }
+    .muted { color: var(--muted); font-size: 14px; }
+    .card { background:var(--card); border:1px solid #e6e2d6; border-radius:16px; padding:18px; }
+    .scene-line { font-size: 19px; line-height:1.6; }
+    .btn { display:block; width:100%; padding:16px; font-size:17px; border:0;
+      border-radius:14px; background:var(--accent); color:#fff; cursor:pointer; }
+    .btn.secondary { background:#e7e3d6; color:var(--ink); }
+    .exit { background:#fff; color:var(--ink); border:1px solid #d8d3c2; }
+    .row { display:flex; gap:10px; }
+    .row .btn { flex:1; }
+    .tag { display:inline-block; font-size:12px; background:#e7e3d6; color:var(--ink);
+      padding:3px 8px; border-radius:999px; width:max-content; }
+    .progress { height:6px; background:#e6e2d6; border-radius:999px; overflow:hidden; }
+    .progress > i { display:block; height:100%; width:0; background:var(--accent); }
+    .proto-note { font-size:12px; color:var(--muted); border-top:1px dashed #d8d3c2;
+      padding-top:10px; margin-top:auto; }
+  </style>
+</head>
+<body>
+
+  <!-- VIEW: HOME / scene card -->
+  <section id="view-home" class="screen active" aria-label="Home">
+    <span class="tag">Prototype · low fidelity</span>
+    <h1>PauseSpace</h1>
+    <p class="muted">A short, calm moment. Pick one scene to try.</p>
+    <button class="card" style="text-align:left;border:1px solid #e6e2d6" onclick="go('detail')">
+      <strong>Exam room</strong>
+      <div class="muted">About 3 minutes · a quiet pause before or after an exam</div>
+    </button>
+    <button class="btn secondary" onclick="go('about')">About PauseSpace</button>
+    <p class="proto-note">Synthetic copy · no audio · not diagnosis, treatment, counselling, or emergency support.</p>
+  </section>
+
+  <!-- VIEW: SCENE DETAIL -->
+  <section id="view-detail" class="screen" aria-label="Scene detail">
+    <button class="exit btn secondary" onclick="go('home')">← Back</button>
+    <h2>Exam room</h2>
+    <p class="muted">About 3 minutes. You can stop at any time.</p>
+    <div class="card scene-line">Rest your attention on one concrete detail in the room.</div>
+    <button class="btn" onclick="startPlayer()">Start</button>
+    <button class="exit btn secondary" onclick="go('home')">Exit</button>
+    <p class="proto-note">Prototype: only the exam-room scene is wired up.</p>
+  </section>
+
+  <!-- VIEW: PLAYER -->
+  <section id="view-player" class="screen" aria-label="Player">
+    <div class="progress"><i id="bar"></i></div>
+    <div class="muted" id="seg-label">Settle</div>
+    <div class="card scene-line" id="seg-text"></div>
+    <div class="row">
+      <button class="btn" id="next-btn" onclick="next()">Next</button>
+      <button class="exit btn secondary" onclick="exitPlayer()">Exit</button>
+    </div>
+    <p class="proto-note">You can leave at any time. No audio in this prototype.</p>
+  </section>
+
+  <!-- VIEW: COMPLETION -->
+  <section id="view-done" class="screen" aria-label="Completion">
+    <h2>That’s the scene.</h2>
+    <p class="muted">Thanks for trying it.</p>
+    <button class="btn" onclick="go('home')">Return to the menu</button>
+    <button class="btn secondary" onclick="startPlayer()">Replay</button>
+  </section>
+
+  <!-- VIEW: ABOUT (project / about) -->
+  <section id="view-about" class="screen" aria-label="About">
+    <button class="exit btn secondary" onclick="go('home')">← Back</button>
+    <h2>About PauseSpace</h2>
+    <p class="muted">A mobile web app with short, calm-focus scenes. It is <strong>not</strong> diagnosis, treatment, counselling, or emergency support.</p>
+    <p class="muted">No account, no tracking. Progress stays on this device only.</p>
+    <button class="exit btn secondary" onclick="go('home')">Back to menu</button>
+  </section>
+
+  <script>
+    var SEGMENTS = [
+      {label:"Settle", text:"You might let your attention rest on the quiet of the room for a moment."},
+      {label:"Notice", text:"If you like, notice one concrete detail: the surface of the desk under your hands, the steady hush in the room, or the light from the window. You can let your attention stay with whichever you choose. If it feels okay, you might also notice the feeling of the air as you breathe, only if you want to."},
+      {label:"Choose", text:"There is nothing you need to do here. You can stay with one detail, or let your attention move gently between them."},
+      {label:"Close", text:"When you are ready, you can return to the menu."}
+    ];
+    var i = 0;
+    function go(id){
+      document.querySelectorAll('.screen').forEach(function(s){ s.classList.remove('active'); });
+      document.getElementById('view-' + id).classList.add('active');
+      window.scrollTo(0,0);
+    }
+    function startPlayer(){ i = 0; render(); go('player'); }
+    function render(){
+      var s = SEGMENTS[i];
+      document.getElementById('seg-label').textContent = s.label;
+      document.getElementById('seg-text').textContent = s.text;
+      document.getElementById('bar').style.width = (((i+1)/SEGMENTS.length)*100) + '%';
+      document.getElementById('next-btn').textContent = (i === SEGMENTS.length-1) ? 'Finish' : 'Next';
+    }
+    function next(){ if(i < SEGMENTS.length-1){ i++; render(); } else { go('done'); } }
+    function exitPlayer(){ go('home'); }
+  </script>
+</body>
+</html>

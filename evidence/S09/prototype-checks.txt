@@ -1,0 +1,30 @@
+########## S09 MOBILE-PROTOTYPE ACCEPTANCE CHECKS ##########
+# Command: python3 evidence/S09/validate_prototype.py
+# Captured: 2026-08-01
+##########################################################
+[PASS] design/prototype/index.html exists and is non-empty
+[PASS] HTML has DOCTYPE + <html> + <body>
+[PASS] A1 four views present (home/detail/player/done) — all four
+[PASS] A1 explicit exit controls (exit class + 'Exit' label)
+[PASS] A1 synthetic copy (exam-room + a script line)
+[PASS] A2 mobile viewport meta
+[PASS] A2 mobile container (max-width)
+[PASS] A2 no external network scripts/styles — self-contained
+[PASS] A2 no backend / no frameworks / no analytics markers
+[PASS] docs/UsabilityTasks.md exists and is non-empty
+[PASS] A3 UsabilityTasks defines task + observation/issue templates + no-coaching — all present
+[PASS] regression: S01-S08 baseline unchanged from 0ed8bd2 (excl. S09 in-scope files) — no diff (baseline intact)
+
+============================================================
+RESULT: 12/12 checks passed
+============================================================
+
+validator_exit_code=0
+
+########## INDEPENDENT RE-CHECKS ##########
+--- HTML parses (html.parser, no exception) ---
+parsed OK, no exception
+--- PII/secret scan of S09 files ---
+(no email/secret/token patterns)
+--- S08 still passes (regression of the regression) ---
+============================================================

@@ -1,0 +1,17 @@
+PauseSpace — S09 pre-session checkpoint
+Captured: 2026-08-01
+
+Pre-session commit (S08 completion, HEAD at start of S09):
+  0ed8bd20d6f56578b7c6b7f4a3f24830176d41b2
+  subject: docs: complete S08 Information architecture
+  branch: main (tracking origin/main, in sync)
+
+Working tree at start of S09: CLEAN.
+
+S08 re-verified on this checkpoint: evidence/S08/validate_ia.py = 12/12 PASS.
+S08 acceptance was confirmed by the user proceeding to S09 and by commit 0ed8bd2;
+the S08 checkbox has been checked as part of the S08 -> S09 transition.
+
+Note: S09 introduces the first code in the project — a low-fidelity static
+prototype (design/prototype/) plus docs/UsabilityTasks.md. The peer usability
+test is a student-facilitated manual gate.
