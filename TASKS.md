@@ -13,12 +13,12 @@ Build PauseSpace as a privacy-first, static, scene-based attention-reset Web App
 - Do not implement a future session before the current session passes acceptance.
 
 ## Current Unit
-Unit code: S09
-Unit focus: Mobile prototype
+Unit code: S10
+Unit focus: Visual and accessibility system
 Current prompt:
 
 ```markdown
-# S09 - Mobile prototype
+# S10 - Visual and accessibility system
 
 ## Role
 Act as the implementation partner for this bounded PauseSpace InnovationLab session. Preserve student ownership and the approved static, privacy-first architecture.
@@ -27,31 +27,31 @@ Act as the implementation partner for this bounded PauseSpace InnovationLab sess
 Open README.md, TASKS.md, docs/ProjectPlan.md, docs/Architecture.md, docs/DecisionLog.md, the listed in-scope files, and current tests. Inspect before proposing changes.
 
 ## Current State
-Confirm the repository checkpoint and report what already works, failing tests, known issues, and active task S09 / P3. Do not assume missing work is complete.
+Confirm the repository checkpoint and report what already works, failing tests, known issues, and active task S10 / P3. Do not assume missing work is complete.
 
 ## Session Objective
-Build a low-fidelity interactive prototype for one full scene.
+Define original art direction, tokens, reduced motion, focus and touch targets.
 
 ## Scope
-In scope: design/prototype/; docs/UsabilityTasks.md. Make only changes required for “Mobile prototype”. Preserve all working behavior outside this boundary.
+In scope: design/tokens.css; docs/Accessibility.md. Make only changes required for “Visual and accessibility system”. Preserve all working behavior outside this boundary.
 
 ## Requirements
-Create one clickable mobile vertical slice from scene card through completion; use realistic synthetic copy and explicit exit controls; avoid engineering beyond the prototype. Keep the four authoritative scenes and the approved static, local-first, non-diagnostic boundary; use synthetic or properly anonymized data only.
+Define original color/type/spacing/touch/focus tokens; specify reduced motion, contrast, keyboard order, transcripts, status messaging, and responsive breakpoints. Keep the four authoritative scenes and the approved static, local-first, non-diagnostic boundary; use synthetic or properly anonymized data only.
 
 ## Implementation Sequence
 1) Verify baseline and tests. 2) Create a checkpoint. 3) State the smallest runnable change. 4) Implement in small steps. 5) Run focused tests after each step. 6) Run the session acceptance checks. 7) Update TASKS, Decision Log and Co-build Log.
 
 ## Files
-Create or modify only: design/prototype/; docs/UsabilityTasks.md. Explicitly preserve deployed assets, approved scripts, unrelated styles, test evidence and prior decisions.
+Create or modify only: design/tokens.css; docs/Accessibility.md. Explicitly preserve deployed assets, approved scripts, unrelated styles, test evidence and prior decisions.
 
 ## Tests and Acceptance Criteria
-Acceptance gate: A peer completes the path without explanation. Run the defined usability task with one consenting peer; record only task observations; save prototype version and issue list. Report exact commands, expected versus actual results, manual checks, and evidence paths. Never invent passing results.
+Acceptance gate: WCAG 2.2 AA-oriented checklist passes prototype review. Run the accessibility checklist on the prototype; verify focus visibility, 44px-class touch targets, contrast, zoom, reduced motion, and original/licensed assets. Report exact commands, expected versus actual results, manual checks, and evidence paths. Never invent passing results.
 
 ## Evidence to Save
-Save dated evidence under evidence/S09/: relevant screenshots or recordings, command/test output, reviewed artifacts, defect references, and the pre/post-session checkpoint IDs. Do not save personal or identifying data.
+Save dated evidence under evidence/S10/: relevant screenshots or recordings, command/test output, reviewed artifacts, defect references, and the pre/post-session checkpoint IDs. Do not save personal or identifying data.
 
 ## Student Manual Work
-Student facilitates the test without coaching and decides which finding is actionable. The student must review every diff and write the final Co-build Log decision in their own words.
+Student chooses the visual direction, checks it on a phone, and documents asset provenance. The student must review every diff and write the final Co-build Log decision in their own words.
 
 ## Security and Safety
 Do not collect names, mental-health histories, family details, mood scores, microphone data, analytics identifiers, or secrets. Do not add diagnosis, treatment, emergency promises, forced breathing, autoplay, or unreviewed support contacts.
@@ -61,12 +61,12 @@ Do not add frameworks, backend, login, AI runtime chat, cloud sync, trackers, st
 
 ## TASKS.md Session Activation
 Before implementation, update only the editable fields in `TASKS.md`:
-- `Unit code: S09`
-- `Unit focus: Mobile prototype`
-- `Current prompt: paste this complete S09 prompt only`
+- `Unit code: S10`
+- `Unit focus: Visual and accessibility system`
+- `Current prompt: paste this complete S10 prompt only`
 - Replace the three placeholder acceptance lines with this session's observable acceptance criteria.
 
-Do not recreate or overwrite `TASKS.md`. Preserve the full S01-S22 checklist, completed checkmarks, known issues, and last test evidence. After acceptance passes, mark only S09 complete, record actual evidence, and set the next unit only as preparation.
+Do not recreate or overwrite `TASKS.md`. Preserve the full S01-S22 checklist, completed checkmarks, known issues, and last test evidence. After acceptance passes, mark only S10 complete, record actual evidence, and set the next unit only as preparation.
 
 ## Checkpoint and Rollback
 Record the pre-session checkpoint identifier. If acceptance fails, keep the last runnable state, log the defect, and provide the exact rollback path without erasing evidence.
@@ -75,13 +75,13 @@ Record the pre-session checkpoint identifier. If acceptance fails, keep the last
 List changed files; summarize decisions; show tests and manual checks; identify limitations and unresolved risks; update traceability; name the next safe step without implementing it.
 
 ## Stop Condition
-Stop when S09 acceptance criteria pass and evidence is saved. Do not begin the next session.
+Stop when S10 acceptance criteria pass and evidence is saved. Do not begin the next session.
 ```
 
 ## Acceptance Criteria for Current Unit
-- A1 — Clickable vertical slice: `design/prototype/` contains a mobile, clickable prototype covering scene card → scene detail → player → completion for one scene, with explicit exit controls and synthetic copy. (Auto-verifiable structure; the peer test is the manual gate.)
-- A2 — Self-contained & low fidelity: the prototype is static (no backend, no external network scripts, no frameworks), with a mobile viewport and large tap targets. (Auto-verifiable.)
-- A3 — Usability task + evidence: `docs/UsabilityTasks.md` defines the task and observation/issue templates; pre/post checkpoint IDs and check output saved under `evidence/S09/`; the peer usability test (a consenting peer completes the path without explanation; the student facilitates without coaching) and the saved issue list are student-owned manual gates. (Manual, student-owned gate.)
+- A1 — Design tokens: `design/tokens.css` defines original color/type/spacing tokens, a `--touch-min` of at least 44px, a visible-focus token/rule, a reduced-motion media query, and responsive breakpoints. (Auto-verifiable.)
+- A2 — Accessibility spec + prototype a11y check: `docs/Accessibility.md` is a WCAG 2.2 AA-oriented checklist (reduced motion, contrast, keyboard order, transcripts, status messaging, breakpoints, touch, focus, zoom, original/licensed assets); the automated check on the prototype passes (zoom allowed, ≥44px touch targets, AA contrast, no motion, focus not disabled, no copied/external assets). (Auto-verifiable; the student phone check is the manual gate.)
+- A3 — Evidence + sign-off: pre/post checkpoint IDs and check output saved under `evidence/S10/`; the student chooses the visual direction, checks it on a phone, and documents asset provenance — student-owned manual gates. (Manual, student-owned gate.)
 
 ## Completed Units
 - [x] S01
@@ -92,7 +92,7 @@ Stop when S09 acceptance criteria pass and evidence is saved. Do not begin the n
 - [x] S06
 - [x] S07
 - [x] S08
-- [ ] S09
+- [x] S09
 - [ ] S10
 - [ ] S11
 - [ ] S12
@@ -112,8 +112,8 @@ Stop when S09 acceptance criteria pass and evidence is saved. Do not begin the n
 - Locally approved support contacts; owner: mentor/adult reviewer; next action: approve before S15 release gate.
 
 ## Last Test Evidence
-- Automated (S09): `evidence/S09/prototype-checks.txt` — 12/12 PASS (validator `evidence/S09/validate_prototype.py`, exit 0). Covers prototype has 4 views (home/detail/player/done) + explicit exit controls + mobile viewport + synthetic copy, is self-contained (no backend/external network/frameworks/analytics), UsabilityTasks defines task + observation/issue templates + no-coaching, and S01-S08 regression (git diff vs `0ed8bd2` = no change, excluding S09 in-scope files).
-- Automated (preserved): S08 12/12; S07 11/11; S06 22/22; S05 12/12; S04 10/10; S03 14/14; S02 14/14; S01 12/12.
-- Content/data validation (S09): `design/prototype/index.html` parses cleanly via `html.parser`; independent email/secret/token scan of S09 files is clean.
-- Accessibility/device: The prototype is mobile-first (viewport + large tap targets) but is **not** formally accessibility/device-tested; deferred to S10 / B-11. (S09 is a low-fidelity prototype.)
-- Manual demo path: The prototype is clickable (open `design/prototype/index.html`). **Peer usability test (A3) OPEN** — the student must facilitate a no-coaching test with one consenting peer and save the issue list.
+- Automated (S10): `evidence/S10/a11y-checks.txt` — 16/16 PASS (validator `evidence/S10/validate_a11y.py`, exit 0). Covers tokens.css defines color/type/spacing/touch(44px)/focus/reduced-motion/breakpoints, Accessibility.md covers all WCAG 2.2 AA topics, and the S09 prototype passes a11y (zoom allowed, ≥44px touch, computed AA contrast on 3 pairs, no motion, focus not disabled, no copied/external assets); S01-S09 regression (git diff vs `910a89f` = no change, excluding S10 in-scope files).
+- Automated (preserved): S09 12/12; S08 12/12; S07 11/11; S06 22/22; S05 12/12; S04 10/10; S03 14/14; S02 14/14; S01 12/12.
+- Content/data validation (S10): new files non-empty; secret-scan "hits" are the word "token" in "design tokens" — no real credentials.
+- Accessibility/device: WCAG 2.2 AA checklist run against the prototype (automated contrast/touch/zoom/motion/focus/assets all pass). Formal device/AT testing deferred to the app build (S11+); the student phone check is the manual gate.
+- Manual demo path: Tokens + checklist are reviewable; **manual gate (A3) OPEN** — the student chooses the visual direction, checks it on a phone, and documents asset provenance.

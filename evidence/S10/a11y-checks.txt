@@ -1,0 +1,34 @@
+########## S10 VISUAL-AND-ACCESSIBILITY ACCEPTANCE CHECKS ##########
+# Command: python3 evidence/S10/validate_a11y.py
+# Captured: 2026-08-01
+###################################################################
+[PASS] design/tokens.css exists and is non-empty
+[PASS] A1 color tokens defined
+[PASS] A1 type tokens defined
+[PASS] A1 spacing tokens defined
+[PASS] A1 touch target >=44px
+[PASS] A1 visible focus token/rule
+[PASS] A1 reduced-motion media query
+[PASS] A1 responsive breakpoints
+[PASS] A2 Accessibility.md covers all WCAG 2.2 AA topics — all present
+[PASS] A2 prototype allows zoom (no user-scalable=no / maximum-scale=1) — width=device-width, initial-scale=1
+[PASS] A2 prototype touch targets >=44px (16px button padding)
+[PASS] A2 prototype has no motion to reduce (no transition/animation)
+[PASS] A2 prototype does not disable focus outline
+[PASS] A2 prototype uses no copied/external assets (no <img>, no url(http)
+[PASS] A2 prototype palette meets AA contrast (>=4.5:1) — 3 pairs computed, all >=4.5
+[PASS] regression: S01-S09 baseline unchanged from 910a89f (excl. S10 in-scope files) — no diff (baseline intact)
+
+============================================================
+RESULT: 16/16 checks passed
+============================================================
+
+validator_exit_code=0
+
+########## INDEPENDENT RE-CHECKS ##########
+--- PII/secret scan of S10 files ---
+docs/Accessibility.md:4:`design/tokens.css`. This spec is applied at the app build (S11+); the
+docs/Accessibility.md:18:| Responsive | Mobile-first breakpoints (≥600px, ≥900px) | Defined — `design/tokens.css` |
+design/tokens.css:1:/* PauseSpace design tokens (S10).
+--- S09 still passes (regression of the regression) ---
+============================================================

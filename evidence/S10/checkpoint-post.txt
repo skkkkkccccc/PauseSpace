@@ -1,0 +1,30 @@
+PauseSpace — S10 post-session checkpoint
+Captured: 2026-08-01
+
+Post-session commit (HEAD): UNCHANGED from pre-session
+  910a89fe1a8ff76b4a52ababdd0dbc1f22b84105
+  subject: docs: complete S09 Mobile prototype
+  branch: main (tracking origin/main)
+
+S10 deliverables (uncommitted, left for student review and the student's commit):
+
+  M  TASKS.md              (S09 checked; S10 activated: prompt + criteria)
+  ?? design/tokens.css      (new: original AA-compliant color/type/spacing/touch/focus tokens + reduced motion + breakpoints)
+  ?? docs/Accessibility.md  (new: WCAG 2.2 AA checklist + prototype review + asset provenance)
+  ?? evidence/S10/          (new: checkpoint-pre/post, a11y-checks.txt, validate_a11y.py)
+
+  (DecisionLog.md and docs/CoBuildLog.md will also be modified when the logs are updated.)
+
+Rollback to the pre-session checkpoint (nothing S10-related was committed):
+  git restore TASKS.md docs/DecisionLog.md docs/CoBuildLog.md
+  rm -f design/tokens.css docs/Accessibility.md
+  rm -rf evidence/S10
+
+Acceptance status: technical/delivery criteria (A1, A2) PASS — 16/16 automated
+checks; prototype a11y passes (zoom, >=44px touch, AA contrast by computation, no
+motion, focus not disabled, no copied/external assets); S01-S09 baseline unchanged
+from 910a89f. The manual gate (A3) is student-owned and OPEN — the student chooses
+the visual direction, checks it on a phone, and documents asset provenance.
+
+Note: the secret-scan "hits" in a11y-checks.txt are the word "token" in "design
+tokens" / "tokens.css" — not credentials. No real secrets are present.
