@@ -1,0 +1,27 @@
+########## S07 CONTENT-REVIEW-AND-RECORDING ACCEPTANCE CHECKS ##########
+# Command: python3 evidence/S07/validate_review.py
+# Captured: 2026-08-01
+########################################################################
+[PASS] docs/ContentReview.md exists and is non-empty
+[PASS] ContentReview references all four scenes — all four
+[PASS] ContentReview has script version IDs (<scene>.v1) — all four
+[PASS] ContentReview records transcript version IDs
+[PASS] ContentReview records adult-approval status (PENDING)
+[PASS] ContentReview has a frozen-version rule
+[PASS] assets/audio/README.md exists and is non-empty
+[PASS] audio README covers setup/filenames/levels/retake/transcript/license — all present
+[PASS] each scene audio.src matches assets/audio/<scene-id>.mp3 — all four match
+[PASS] rubric re-check: all four scripts still choice-language clean — all clean
+[PASS] regression: S01-S06 baseline unchanged from d9762c6 — no diff (baseline intact)
+
+============================================================
+RESULT: 11/11 checks passed
+============================================================
+
+validator_exit_code=0
+
+########## INDEPENDENT RE-CHECKS ##########
+--- new docs non-empty + PII/secret scan ---
+(no email/secret/token patterns)
+--- S06 still passes (regression of the regression) ---
+============================================================

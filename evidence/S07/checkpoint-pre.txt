@@ -1,0 +1,17 @@
+PauseSpace — S07 pre-session checkpoint
+Captured: 2026-08-01
+
+Pre-session commit (S06 completion, HEAD at start of S07):
+  d9762c68923e1edd0807435673ece57ecbf7cbd0
+  subject: docs: complete S06 Room and empty-classroom scripts and OA01 Optional AI Audio Extension
+  branch: main (tracking origin/main, in sync)
+
+Working tree at start of S07: CLEAN.
+
+S06 re-verified on this checkpoint: evidence/S06/validate_scripts.py = 22/22 PASS.
+S06 acceptance was confirmed by the user proceeding to S07 and by commit d9762c6
+(which also included the OA01 optional-extension files); the S06 checkbox has
+been checked as part of the S06 -> S07 transition.
+
+Note: S07 has two manual gates — adult approval of all four scripts, and a
+student test recording (record sample, listen on phone + headphones).
