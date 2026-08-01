@@ -1,0 +1,21 @@
+{
+  "id": "own-room",
+  "title": "Your own room",
+  "moment": "A short reset in a familiar space",
+  "focus": "Notice one small, familiar thing around you",
+  "durationSeconds": 180,
+  "segments": [
+    { "order": 1, "label": "Settle", "startSecond": 0, "endSecond": 30, "optional": false,
+      "text": "You might let your attention settle where you are for a moment." },
+    { "order": 2, "label": "Notice", "startSecond": 30, "endSecond": 120, "optional": false,
+      "text": "If you like, notice one small thing in the room: a familiar object on the shelf, the surface of the desk, or the colour of the light where you are. You can let your attention rest on whichever you choose. If it feels okay, you might notice the gentle movement of your breathing, only if you want to." },
+    { "order": 3, "label": "Choose", "startSecond": 120, "endSecond": 165, "optional": true,
+      "text": "There is nothing you need to do here. You can stay with one thing, or let your attention wander gently." },
+    { "order": 4, "label": "Close", "startSecond": 165, "endSecond": 180, "optional": false,
+      "text": "When you are ready, you can return to the menu." }
+  ],
+  "exit": { "language": "You can stop at any time and return to the menu.", "optional": true },
+  "transcript": { "sameOrigin": true, "text": "You might let your attention settle where you are for a moment. If you like, notice one small thing in the room: a familiar object on the shelf, the surface of the desk, or the colour of the light where you are. You can let your attention rest on whichever you choose. If it feels okay, you might notice the gentle movement of your breathing, only if you want to. There is nothing you need to do here. You can stay with one thing, or let your attention wander gently. When you are ready, you can return to the menu." },
+  "audio": { "sameOrigin": true, "src": "assets/audio/own-room.mp3", "format": "mp3" },
+  "review": { "status": "draft", "reviewer": "ai-draft-pending-student-rewrite" }
+}

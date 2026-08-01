@@ -1,0 +1,16 @@
+PauseSpace — S06 pre-session checkpoint
+Captured: 2026-08-01
+
+Pre-session commit (S05 completion, HEAD at start of S06):
+  bdf0ff3ffa9b14f38e5dbffb7eca0a989e40a5a1
+  subject: docs: complete S05 Exam and sports scripts
+  branch: main (tracking origin/main, in sync)
+
+Working tree at start of S06: CLEAN.
+
+S05 re-verified on this checkpoint: evidence/S05/validate_scripts.py = 12/12 PASS.
+S05 acceptance was confirmed by the user proceeding to S06 and by commit bdf0ff3;
+the S05 checkbox has been checked as part of the S05 -> S06 transition.
+
+Note: S06 completes the four launch scenes (own-room, empty-classroom added to
+exam-room, sports-field), fully resolving open decision D8.

@@ -1,0 +1,40 @@
+########## S06 ROOM-AND-EMPTY-CLASSROOM ACCEPTANCE CHECKS ##########
+# Command: python3 evidence/S06/validate_scripts.py
+# Captured: 2026-08-01
+######################################################################
+[PASS] exam-room: conforms to content/schema.json (structure) — OK
+[PASS] exam-room: timing budget (ordered, within duration) — OK
+[PASS] exam-room: rubric — no commands/promises/judgments/forced breathing — clean
+[PASS] exam-room: spoken duration fits budget (est ~133s <= 180s, words=221) — est 133s
+[PASS] exam-room: review.status is draft (pending student rewrite/read-aloud)
+[PASS] sports-field: conforms to content/schema.json (structure) — OK
+[PASS] sports-field: timing budget (ordered, within duration) — OK
+[PASS] sports-field: rubric — no commands/promises/judgments/forced breathing — clean
+[PASS] sports-field: spoken duration fits budget (est ~136s <= 180s, words=227) — est 136s
+[PASS] sports-field: review.status is draft (pending student rewrite/read-aloud)
+[PASS] own-room: conforms to content/schema.json (structure) — OK
+[PASS] own-room: timing budget (ordered, within duration) — OK
+[PASS] own-room: rubric — no commands/promises/judgments/forced breathing — clean
+[PASS] own-room: spoken duration fits budget (est ~127s <= 180s, words=211) — est 127s
+[PASS] own-room: review.status is draft (pending student rewrite/read-aloud)
+[PASS] empty-classroom: conforms to content/schema.json (structure) — OK
+[PASS] empty-classroom: timing budget (ordered, within duration) — OK
+[PASS] empty-classroom: rubric — no commands/promises/judgments/forced breathing — clean
+[PASS] empty-classroom: spoken duration fits budget (est ~135s <= 180s, words=225) — est 135s
+[PASS] empty-classroom: review.status is draft (pending student rewrite/read-aloud)
+[PASS] A1 four scenes share the same content contract (keys/duration/segments/labels/status) — keysets=1 durations={180} seg_counts={4} label_sets=1 statuses={'draft'}
+[PASS] regression: S01-S05 baseline unchanged from bdf0ff3 — no diff (baseline intact)
+
+============================================================
+RESULT: 22/22 checks passed
+============================================================
+
+validator_exit_code=0
+
+########## INDEPENDENT RE-CHECKS ##########
+--- all four scenes parse as JSON ---
+all four valid JSON
+--- PII/secret scan of S06 scene files ---
+(no email/secret/token patterns)
+--- S05 still passes (regression of the regression) ---
+============================================================

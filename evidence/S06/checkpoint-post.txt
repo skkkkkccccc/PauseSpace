@@ -1,0 +1,35 @@
+PauseSpace — S06 post-session checkpoint
+Captured: 2026-08-01
+
+Post-session commit (HEAD): UNCHANGED from pre-session
+  bdf0ff3ffa9b14f38e5dbffb7eca0a989e40a5a1
+  subject: docs: complete S05 Exam and sports scripts
+  branch: main (tracking origin/main)
+
+S06 deliverables (uncommitted, left for student review and the student's commit):
+
+  M  TASKS.md                   (S05 checked; S06 activated: prompt + criteria)
+  ?? content/own-room.json       (new: own-room scene script, draft)
+  ?? content/empty-classroom.json(new: empty-classroom scene script, draft)
+  ?? evidence/S06/               (new: checkpoint-pre/post, scripts-checks.txt, revision-history.md, validate_scripts.py)
+
+  (DecisionLog.md and docs/CoBuildLog.md will also be modified when the logs are updated.)
+
+Rollback to the pre-session checkpoint (nothing S06-related was committed):
+  git restore TASKS.md docs/DecisionLog.md docs/CoBuildLog.md
+  rm -rf content/own-room.json content/empty-classroom.json evidence/S06
+
+Acceptance status: technical/delivery criteria (A1, A2) PASS — 22/22 automated
+checks; all four scenes share the content contract; S01-S05 baseline unchanged
+from bdf0ff3. The manual gate (A3) is student-owned and OPEN — the student must
+rewrite all final wording, compare tone/pacing across the four scripts, and
+perform the read-alouds; scripts stay review.status=draft until then.
+
+FINDING — untracked files NOT created by this session and NOT part of S06 scope:
+  ?? config/audio-generation.env.example   (placeholder-only; no real secrets)
+  ?? docs/OptionalAIAudioExtension.md
+  ?? prompts/OptionalAudioSessionOA01.md
+These are a user-prepared "Optional AI Audio Extension" (OA01). They are
+security-clean (env example is placeholder-only; prompt text only states
+secret-handling rules). They should be committed separately from S06 if kept,
+and are out of scope for S06. Not modified.
