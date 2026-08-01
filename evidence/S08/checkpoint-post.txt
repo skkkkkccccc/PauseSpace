@@ -1,0 +1,26 @@
+PauseSpace — S08 post-session checkpoint
+Captured: 2026-08-01
+
+Post-session commit (HEAD): UNCHANGED from pre-session
+  6ef5fc4f3eed8d409dc57d67d6d2528fc9d2bdd3
+  subject: docs: complete S07 Content review & recording plan
+  branch: main (tracking origin/main)
+
+S08 deliverables (uncommitted, left for student review and the student's commit):
+
+  M  TASKS.md              (S07 checked; S08 activated: prompt + criteria)
+  M  docs/Architecture.md   (IA section added; original statement preserved)
+  ?? docs/UserFlows.md      (new: five views, navigation, journeys, branches, error states)
+  ?? evidence/S08/          (new: checkpoint-pre/post, ia-checks.txt, validate_ia.py)
+
+  (DecisionLog.md and docs/CoBuildLog.md will also be modified when the logs are updated.)
+
+Rollback to the pre-session checkpoint (nothing S08-related was committed):
+  git restore TASKS.md docs/Architecture.md docs/DecisionLog.md docs/CoBuildLog.md
+  rm -rf docs/UserFlows.md evidence/S08
+
+Acceptance status: technical/delivery criteria (A1, A2) PASS — 12/12 automated
+checks; Architecture.md updated with IA (original preserved); S01-S07 baseline
+unchanged from 6ef5fc4. The manual gate (A3) is student-owned and OPEN — the
+student must perform a paper walkthrough and annotate any confusing labels or
+branches, and write the final Co-build Log decision.

@@ -1,0 +1,16 @@
+PauseSpace — S08 pre-session checkpoint
+Captured: 2026-08-01
+
+Pre-session commit (S07 completion, HEAD at start of S08):
+  6ef5fc4f3eed8d409dc57d67d6d2528fc9d2bdd3
+  subject: docs: complete S07 Content review & recording plan
+  branch: main (tracking origin/main, in sync)
+
+Working tree at start of S08: CLEAN.
+
+S07 re-verified on this checkpoint: evidence/S07/validate_review.py = 11/11 PASS.
+S07 acceptance was confirmed by the user proceeding to S08 and by commit 6ef5fc4;
+the S07 checkbox has been checked as part of the S07 -> S08 transition.
+
+Note: S08 names the five views (home, scene detail, player, pause map,
+project/about), resolving open decision D1 (the five-view map).

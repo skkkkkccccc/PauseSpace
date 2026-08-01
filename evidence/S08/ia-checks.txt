@@ -1,0 +1,28 @@
+########## S08 INFORMATION-ARCHITECTURE ACCEPTANCE CHECKS ##########
+# Command: python3 evidence/S08/validate_ia.py
+# Captured: 2026-08-01
+####################################################################
+[PASS] docs/UserFlows.md exists and is non-empty
+[PASS] A1 UserFlows specifies the five views — all five
+[PASS] A1 navigation includes back/exit/replay/support branches — all present
+[PASS] A2 error states documented (loading/missing-audio/offline/update) — all four
+[PASS] A2 every error state has an exit/recovery in the error section
+[PASS] A2 every view has an exit (>=5 'Exit:' labels) — 10 found
+[PASS] A2 'no forced completion' stated
+[PASS] A2 baseline journeys + no-dead-end checklist present
+[PASS] A3 Architecture.md updated with IA section
+[PASS] A3 Architecture.md original statement preserved
+[PASS] A3 Architecture.md references the five views
+[PASS] regression: S01-S07 baseline unchanged from 6ef5fc4 (excl. S08 in-scope files) — no diff (baseline intact)
+
+============================================================
+RESULT: 12/12 checks passed
+============================================================
+
+validator_exit_code=0
+
+########## INDEPENDENT RE-CHECKS ##########
+--- PII/secret scan of S08 docs ---
+(no email/secret/token patterns)
+--- S07 still passes (regression of the regression) ---
+============================================================
