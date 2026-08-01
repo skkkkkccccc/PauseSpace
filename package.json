@@ -1,0 +1,17 @@
+{
+  "name": "pausespace",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Mobile-first, static, privacy-first scene-based attention-reset web app. Not diagnosis, treatment, counselling, or emergency support.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test src/test/smoke.test.mjs",
+    "lint": "node src/tools/lint.mjs",
+    "build": "node src/tools/build.mjs",
+    "start": "node src/tools/serve.mjs",
+    "preview": "npm run build && npm run start"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

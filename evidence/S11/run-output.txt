@@ -1,0 +1,69 @@
+########## S11 CLEAN-CHECKOUT COMMAND RUN (re-run after fixes, 2026-08-01) ##########
+node: v24.18.0 | npm: 11.16.0
+
+===== 1) npm install =====
+
+up to date, audited 1 package in 295ms
+
+found 0 vulnerabilities
+npm install exit=0
+
+===== 2) npm test =====
+
+> pausespace@0.1.0 test
+> node --test src/test/smoke.test.mjs
+
+✔ four launch scenes are defined (1.939833ms)
+✔ known and unknown scene ids (0.456792ms)
+✔ scene ids match the four launch scenes (3.385708ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1893.344667
+npm test exit=0
+
+===== 3) npm run lint =====
+
+> pausespace@0.1.0 lint
+> node src/tools/lint.mjs
+
+lint: clean — no secrets, external URLs, trackers, or medical claims in src.
+npm run lint exit=0
+
+===== 4) npm run build =====
+
+> pausespace@0.1.0 build
+> node src/tools/build.mjs
+
+build: copied src/{index.html,styles.css,app.js} -> dist/ (3 files)
+npm run build exit=0
+dist/ contents:
+app.js
+index.html
+styles.css
+
+===== 5) npm start (preview) + curl =====
+HTTP 200 (bytes 325)
+--- served HTML (first 6 lines) ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PauseSpace</title>
+--- server log ---
+
+> pausespace@0.1.0 start
+> node src/tools/serve.mjs
+
+preview: http://localhost:3000  (serving /Users/shikanchengdediannao/Desktop/PauseSpace_InnovationLab_Complete_Pack(Corrected) 2/PauseSpace/dist)
+
+===== structural validator =====
+
+============================================================
+RESULT: 18/18 checks passed
+============================================================
