@@ -17,5 +17,5 @@
   "exit": { "language": "You can stop at any time and return to the menu.", "optional": true },
   "transcript": { "sameOrigin": true, "text": "You might let your attention rest where you are for a moment. If you like, notice one steady detail: the feel of the ground under your shoes, the open shape of the sky, or the sounds that come and go across the field. You can let your attention rest on whichever you choose. If it feels okay, you might notice the air on your face, or the gentle rhythm of your own breathing, only if you want to. There is nothing you need to do here. You can stay with one detail, or let your attention drift gently. When you are ready, you can return to the menu." },
   "audio": { "sameOrigin": true, "src": "assets/audio/sports-field.mp3", "format": "mp3" },
-  "review": { "status": "draft", "reviewer": "ai-draft-pending-student-rewrite" }
+  "review": { "status": "approved", "reviewer": "student-and-mentor-approved" }
 }

@@ -1,0 +1,33 @@
+PauseSpace — OA01 post-scaffolding checkpoint (updated after script approval)
+Captured: 2026-08-03
+
+Post-session commit (HEAD): UNCHANGED from pre-extension
+  8b88e96daa0a7ac187d0d8363120954876ffa
+  subject: Complete S12 Data and state contracts
+  branch: main (tracking origin/main)
+
+State change this session:
+- The four scene scripts were APPROVED on the student's confirmation (read-aloud
+  + mentor/adult approval): content/{exam-room,sports-field,own-room,empty-classroom}.json
+  review.status draft -> approved; reviewer "student-and-mentor-approved".
+- docs/ContentReview.md updated: all four rows Adult approval = approved; banner + open items updated; versions frozen v1.
+
+OA01 deliverables (uncommitted; no-generation scaffolding):
+  M  TASKS.md, package.json, docs/DecisionLog.md, docs/CoBuildLog.md,
+  M  docs/ContentReview.md, content/{exam-room,sports-field,own-room,empty-classroom}.json
+  ?? scripts/generate-audio.mjs, scripts/lib/tts-provider.mjs
+  ?? tests/audio-generation.test.mjs
+  ?? assets/audio/generated/ (empty), assets/audio/audio-manifest.generated.json
+  ?? docs/AudioGenerationRecord.md
+  ?? evidence/OA01/
+
+NOT modified: src/*, docs/Architecture.md, docs/UserFlows.md, design/*, all other
+S01-S11 baseline files. No MP3s exist. No provider chosen. No audio generated.
+
+Acceptance: OA01 A2 (safe tooling) PASS — dry-run zero requests/no secret,
+draft/provider refusal (9/9 tests), build clean, validator 19/19. OA01 A1 is now
+PARTIALLY met: scripts approved ✅; provider decision still PENDING ❌. OA01 A3
+(4 reviewed MP3s + release mapping) remains BLOCKED on the provider decision.
+OA01 is NOT complete. S13 has not been started.
+
+Rollback (non-destructive): see docs/AudioGenerationRecord.md §Rollback.

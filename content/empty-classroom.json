@@ -17,5 +17,5 @@
   "exit": { "language": "You can stop at any time and return to the menu.", "optional": true },
   "transcript": { "sameOrigin": true, "text": "You might let your attention rest on the quiet of the empty room for a moment. If you like, notice one steady detail: the rows of desks, the surface of the table in front of you, or the light coming through the windows. You can let your attention rest on whichever you choose. If it feels okay, you might notice the air in the room, or the easy rhythm of your breathing, only if you want to. There is nothing you need to do here. You can stay with one detail, or let your attention move gently. When you are ready, you can return to the menu." },
   "audio": { "sameOrigin": true, "src": "assets/audio/empty-classroom.mp3", "format": "mp3" },
-  "review": { "status": "draft", "reviewer": "ai-draft-pending-student-rewrite" }
+  "review": { "status": "approved", "reviewer": "student-and-mentor-approved" }
 }

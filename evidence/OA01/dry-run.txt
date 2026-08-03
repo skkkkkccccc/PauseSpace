@@ -1,0 +1,15 @@
+########## OA01 DRY-RUN (after script approval; 2026-08-03) ##########
+
+> pausespace@0.1.0 audio:dry-run
+> node scripts/generate-audio.mjs --dry-run
+
+OA01 dry-run: ZERO provider requests. No secret is read or printed.
+- exam-room: status=approved approved=true transcriptSha256=7436e44856a9… output=assets/audio/generated/exam-room.7436e448.ai.mp3 estRequests=1
+- sports-field: status=approved approved=true transcriptSha256=319204b7479f… output=assets/audio/generated/sports-field.319204b7.ai.mp3 estRequests=1
+- own-room: status=approved approved=true transcriptSha256=bf08c077600f… output=assets/audio/generated/own-room.bf08c077.ai.mp3 estRequests=1
+- empty-classroom: status=approved approved=true transcriptSha256=6aad1806d73e… output=assets/audio/generated/empty-classroom.6aad1806.ai.mp3 estRequests=1
+Provider configured: false | approved-set size: 0
+Planned requests (would run only after preview approval): 4 | blocked scripts: 0
+Scripts approved; generation still BLOCKED: no approved provider configured.
+No network calls made. No MP3s written.
+audio:dry-run exit=0

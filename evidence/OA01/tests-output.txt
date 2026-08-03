@@ -1,0 +1,22 @@
+########## OA01 + BASELINE TESTS (after script approval; 2026-08-03) ##########
+===== npm run test:audio =====
+✔ dry-run plan exposes no secret (0.874041ms)
+✔ redact() never returns the raw value (0.081333ms)
+✔ generationBlockedReason refuses draft scripts (fixture, no real-content coupling) (0.068583ms)
+✔ generationBlockedReason refuses approved script without provider (0.0625ms)
+✔ generate() refuses when provider unconfigured (no network) (0.068916ms)
+✔ generate() refuses an unapproved provider (no network) (0.058125ms)
+✔ CLI dry-run: zero provider requests, no network, no secret (35.757834ms)
+✔ CLI generation is blocked without an approved provider (non-zero exit) (31.937125ms)
+✔ transcript hash is deterministic (0.151459ms)
+ℹ tests 9
+ℹ pass 9
+ℹ fail 0
+done
+===== npm test (S11 smoke) =====
+ℹ tests 3
+ℹ pass 3
+ℹ fail 0
+done
+===== npm run build =====
+build: copied src/{index.html,styles.css,app.js} -> dist/ (3 files)

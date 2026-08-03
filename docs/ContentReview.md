@@ -1,9 +1,8 @@
 # Content Review — PauseSpace scripts (S07)
 
-> **Status: review record established; approvals PENDING.** The four scripts are
-> still AI drafts (`review.status = draft`) pending the student rewrite + read
-> aloud (S06 gate) **and** adult approval (S07 gate). **No script may be recorded
-> until its row shows adult approval = approved.** PauseSpace is not diagnosis,
+> **Status: all four scripts APPROVED (2026-08-03).** The student read each aloud
+> and the mentor/adult reviewer approved; each scene's `review.status` is now
+> `approved`. Script versions are frozen at v1. PauseSpace is not diagnosis,
 > treatment, counselling, or emergency support.
 
 ## Review policy
@@ -21,19 +20,20 @@
 ## Per-script review record
 | Scene | Script version | Transcript version | Rubric | Comments resolved | Adult approval |
 |---|---|---|---|---|---|
-| exam-room | exam-room.v1 | exam-room.v1 | pass (choice language) | none open — pending review | PENDING |
-| sports-field | sports-field.v1 | sports-field.v1 | pass (choice language) | none open — pending review | PENDING |
-| own-room | own-room.v1 | own-room.v1 | pass (choice language) | none open — pending review | PENDING |
-| empty-classroom | empty-classroom.v1 | empty-classroom.v1 | pass (choice language; academic refs bounded/non-diagnostic) | none open — pending review | PENDING |
+| exam-room | exam-room.v1 | exam-room.v1 | pass (choice language) | none open — approved 2026-08-03 | approved |
+| sports-field | sports-field.v1 | sports-field.v1 | pass (choice language) | none open — approved 2026-08-03 | approved |
+| own-room | own-room.v1 | own-room.v1 | pass (choice language) | none open — approved 2026-08-03 | approved |
+| empty-classroom | empty-classroom.v1 | empty-classroom.v1 | pass (choice language; academic refs bounded/non-diagnostic) | none open — approved 2026-08-03 | approved |
 
 (Rubric "pass" = automated scan clean — see `evidence/S07/review-checks.txt`. "Comments resolved" shows no open AI-draft comments; student/adult review may raise new comments, which must be resolved and the version bumped before approval.)
 
 ## Frozen versions
-Versions are frozen only at adult approval. Until then the scripts remain `draft`
-and may still be rewritten by the student. After approval, the frozen version ID
-is the one referenced by the matching `assets/audio/<scene-id>.mp3` recording.
+Versions were frozen at approval on 2026-08-03 (all four at v1). Any later wording
+change requires a new version ID (v2+) and re-approval before re-recording. The
+frozen version ID is the one referenced by the matching `assets/audio/<scene-id>.mp3`
+recording.
 
 ## Open items (manual gates)
-1. Student rewrites all final wording and reads each aloud (S06 gate).
-2. Adult reviews and approves all four scripts (S07 gate) — set each row to `approved` and freeze the version.
-3. Then proceed to recording per `assets/audio/README.md`.
+1. ~~Student rewrites all final wording and reads each aloud (S06 gate).~~ — done 2026-08-03 (current wording approved as-is).
+2. ~~Adult reviews and approves all four scripts (S07 gate).~~ — approved 2026-08-03; versions frozen (v1).
+3. Scripts are now `approved` and may be recorded per `assets/audio/README.md`. (AI-generated narration via OA01 remains blocked on the provider decision; student/recorded production can proceed independently.)

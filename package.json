@@ -9,7 +9,10 @@
     "lint": "node src/tools/lint.mjs",
     "build": "node src/tools/build.mjs",
     "start": "node src/tools/serve.mjs",
-    "preview": "npm run build && npm run start"
+    "preview": "npm run build && npm run start",
+    "audio:dry-run": "node scripts/generate-audio.mjs --dry-run",
+    "audio:generate": "node scripts/generate-audio.mjs",
+    "test:audio": "node --test tests/audio-generation.test.mjs"
   },
   "engines": {
     "node": ">=20"

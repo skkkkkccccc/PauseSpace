@@ -17,5 +17,5 @@
   "exit": { "language": "You can stop at any time and return to the menu.", "optional": true },
   "transcript": { "sameOrigin": true, "text": "You might let your attention settle where you are for a moment. If you like, notice one small thing in the room: a familiar object on the shelf, the surface of the desk, or the colour of the light where you are. You can let your attention rest on whichever you choose. If it feels okay, you might notice the gentle movement of your breathing, only if you want to. There is nothing you need to do here. You can stay with one thing, or let your attention wander gently. When you are ready, you can return to the menu." },
   "audio": { "sameOrigin": true, "src": "assets/audio/own-room.mp3", "format": "mp3" },
-  "review": { "status": "draft", "reviewer": "ai-draft-pending-student-rewrite" }
+  "review": { "status": "approved", "reviewer": "student-and-mentor-approved" }
 }
