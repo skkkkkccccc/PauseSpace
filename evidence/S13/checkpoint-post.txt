@@ -1,0 +1,31 @@
+PauseSpace — S13 post-session checkpoint
+Captured: 2026-08-03
+
+Post-session commit (HEAD): UNCHANGED from pre-session
+  2d80457791cd730626a926c5ec722d4b10af0ccc
+  subject: wip: park OA01 optional TTS extension (provider unavailable); approve four scene scripts
+  branch: main (tracking origin/main)
+
+S13 deliverables (uncommitted):
+  M  TASKS.md                       (S13 activated: prompt + criteria; S01-S22 + OA01 optional row preserved)
+  ?? src/components/SceneCard.js     (new: scene card from data)
+  ?? src/views/escape-html.js        (new: safe text insertion)
+  ?? src/views/home.js               (new: four cards from validated JSON; empty/error states)
+  ?? src/views/scene-detail.js       (new: detail view; audio = metadata only, no playback/TTS)
+  ?? tests/views.test.mjs            (new: 7 tests)
+  ?? evidence/S13/                   (new: checkpoint-pre/post, views-checks.txt, validate_views.py)
+
+  (docs/DecisionLog.md and docs/CoBuildLog.md will also be modified when logs are updated.)
+
+NOT modified: OA01 files (deferred/untouched), src/app.js, content/*, package.json,
+src/data/*, src/state/*, all earlier baseline files. No audio playback; no runtime TTS.
+
+Rollback to the pre-session checkpoint (nothing S13-related was committed):
+  git restore TASKS.md docs/DecisionLog.md docs/CoBuildLog.md
+  rm -rf src/components src/views tests/views.test.mjs evidence/S13
+
+Acceptance: A1 (four cards render from data; no hard-coded copy) PASS; A2 (malformed
+fails visibly; empty state; safe insertion; no audio/TTS in S13) PASS — 7/7 view tests,
+13/13 validator, baseline npm test 3/3, build clean. The manual gate (A3) is
+student-owned and OPEN — compare with the approved flow + inspect rendered DOM/data
+path + mobile-width check. S13 NOT marked complete. S14 not started. No runtime TTS.

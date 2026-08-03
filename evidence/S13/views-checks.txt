@@ -1,0 +1,22 @@
+########## S13 HOME-AND-SCENE-VIEWS CHECKS (re-run; 2026-08-03) ##########
+===== node --test tests/views.test.mjs =====
+✔ four cards render from data, each with title + open control (0.550584ms)
+✔ homeView renders all four cards from data (no error state) (0.243708ms)
+✔ no scene-specific copy is hard-coded in view/component source (0.153792ms)
+✔ malformed content fails visibly (error state, no throw) (0.10625ms)
+✔ empty state when there are no scenes (0.063458ms)
+✔ safe text insertion (escaping) (0.062584ms)
+✔ detail shows audio metadata but no playback element (no runtime audio/TTS) (0.076792ms)
+ℹ tests 7
+ℹ pass 7
+ℹ fail 0
+===== npm test =====
+ℹ tests 3
+ℹ pass 3
+ℹ fail 0
+===== npm run build =====
+build: copied src/{index.html,styles.css,app.js} -> dist/ (3 files)
+===== validate_views.py =====
+============================================================
+RESULT: 13/13 checks passed
+============================================================

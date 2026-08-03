@@ -1,0 +1,16 @@
+PauseSpace — S13 pre-session checkpoint
+Captured: 2026-08-03
+
+Pre-session commit (OA01 parked; S12 complete; HEAD at start of S13):
+  2d80457  wip: park OA01 optional TTS extension (provider unavailable); approve four scene scripts
+  branch: main (tracking origin/main)
+
+Working tree at start of S13: CLEAN (OA01 changes were committed to isolate them;
+OA01 remains deferred/unchecked — not executed, completed, or repaired in S13).
+
+S12 verified: checkbox [x]; committed at 8b88e96; npm test 3/3.
+Pre-S13 checkpoint (rollback target): 2d80457.
+
+Note: S13 = Home and scene views (render scene cards + detail from validated JSON).
+No audio playback and no runtime TTS in S13 (those are later sessions). The four
+scene scripts are approved (review.status=approved) from the parked OA01 work.
