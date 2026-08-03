@@ -1,0 +1,19 @@
+PauseSpace — S12 pre-session checkpoint
+Captured: 2026-08-03
+
+Pre-session commit (S11 completion, HEAD at start of S12):
+  9f71632fe984495381bd435cbad42b65e2becf78
+  subject: docs: complete S11 Repository kickoff
+  branch: main (tracking origin/main, in sync)
+
+Working tree at start of S12: CLEAN.
+
+S11 re-verified on this checkpoint: npm test = 3 pass / 0 fail. (The S11
+validate_repo.py reports 17/18 because its regression check diffs against the
+PRE-S11 checkpoint 8dd681b; once S11 was committed, all S11 files legitimately
+differ from that checkpoint — a known transition-sensitive false positive, same
+class as documented for S01/S02. S11's structural checks and tests pass.)
+
+Note: S12 adds src/data/ (scene loader), src/state/ (player FSM + versioned
+progress), and tests/. Acceptance runs unit tests for valid, missing, malformed,
+stale-version, interrupted-playback, and reset cases.

@@ -1,0 +1,32 @@
+PauseSpace — S12 post-session checkpoint
+Captured: 2026-08-03
+
+Post-session commit (HEAD): UNCHANGED from pre-session
+  9f71632fe984495381bd435cbad42b65e2becf78
+  subject: docs: complete S11 Repository kickoff
+  branch: main (tracking origin/main)
+
+S12 deliverables (uncommitted, left for student review and the student's commit):
+
+  M  TASKS.md                   (S11 checked; S12 activated: prompt + criteria)
+  ?? src/data/scene-loader.mjs   (new: validateScene + loadScenes; safe error objects)
+  ?? src/state/player.mjs        (new: deterministic FSM; exit always allowed)
+  ?? src/state/progress.mjs      (new: versioned payload, migration/reset, safe errors, injectable store)
+  ?? tests/                      (new: scene-loader, player, progress tests)
+  ?? evidence/S12/               (new: checkpoint-pre/post, test-report.txt, validate_contracts.py)
+
+  (DecisionLog.md and docs/CoBuildLog.md will also be modified when the logs are updated.)
+
+Rollback to the pre-session checkpoint (nothing S12-related was committed):
+  git restore TASKS.md docs/DecisionLog.md docs/CoBuildLog.md
+  rm -rf src/data src/state tests evidence/S12
+
+Acceptance status: technical/delivery criteria (A1, A2) PASS — 16/16 S12 unit
+tests pass (valid/missing/malformed/stale-version/interrupted-playback/reset);
+S11 smoke still passes; no secrets in new modules; structural validator 10/10.
+The manual gate (A3) is student-owned and OPEN — the student draws/explains the
+state machine and adds at least one edge-case test personally.
+
+Known limitation: `npm test` (S11 script) runs only src/test/smoke.test.mjs; the
+S12 tests run via `node --test tests/*.test.mjs`. Wiring tests/ into the npm
+script is a later-session change (package.json is out of S12 scope).

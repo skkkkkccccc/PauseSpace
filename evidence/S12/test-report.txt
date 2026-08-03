@@ -1,0 +1,43 @@
+########## S12 DATA-AND-STATE UNIT TESTS (captured 2026-08-03) ##########
+node: v24.18.0
+
+===== node --test tests/*.test.mjs (S12: valid/missing/malformed/stale-version/interrupted-playback/reset) =====
+✔ happy path: idle -> ready -> playing -> ended (0.706417ms)
+✔ exit is allowed from active states instead of completing (no forced completion) (0.1015ms)
+✔ interrupted playback: playing -> pause -> resume (0.079416ms)
+✔ invalid transition returns a safe error, no throw (0.067833ms)
+✔ reset returns to idle from any state (0.573209ms)
+✔ versioned round-trip (save -> load) (7.511208ms)
+✔ stale-version payload migrates forward (drops non-versioned fields) (0.119417ms)
+✔ malformed stored JSON fails safely (0.091583ms)
+✔ future-version payload signals reset (0.060959ms)
+✔ reset clears stored progress (0.484291ms)
+✔ valid scene passes (0.615292ms)
+✔ missing required field fails safely (no throw) (0.152792ms)
+✔ malformed duration fails safely (0.838375ms)
+✔ malformed non-object input fails safely (no throw) (0.076416ms)
+✔ missing exit language fails safely (0.124959ms)
+✔ loadScenes aggregates valid + failed (0.34925ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 86.976
+node --test exit=0
+
+===== npm test (S11 smoke — regression) =====
+> pausespace@0.1.0 test
+> node --test src/test/smoke.test.mjs
+✔ four launch scenes are defined (0.997292ms)
+✔ known and unknown scene ids (0.090417ms)
+✔ scene ids match the four launch scenes (0.463625ms)
+npm test done
+
+===== structural validator =====
+
+============================================================
+RESULT: 10/10 checks passed
+============================================================
