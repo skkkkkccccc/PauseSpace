@@ -1,0 +1,17 @@
+PauseSpace — S16 pre-session checkpoint
+Captured: 2026-08-04
+
+Pre-session commit (S15 completion, HEAD at start of S16):
+  c124db5e05d1ae7b6d5db4c214c78d3df3f33935
+  subject: Complete S15 Completion choices & support route
+  branch: main (tracking origin/main)
+
+Working tree at start of S16: clean.
+
+S15 verified: completion tests 8/8 (node --test tests/completion.test.mjs). S15
+checkbox checked at this transition. Pre-S16 checkpoint (rollback target): c124db5.
+
+Note: S16 = Pause map & local privacy controls. Builds on the S12 versioned
+progress module (src/state/progress.mjs) — no modification to it. Stores only a
+per-scene "visited" flag (no free text / mood score). content.zip still tracked
+(benign; recommend git rm) — not modified in S16.

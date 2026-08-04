@@ -1,0 +1,40 @@
+########## S16 PAUSE MAP & LOCAL PRIVACY CONTROLS (captured 2026-08-04) ##########
+node: v24.18.0
+
+===== node --test tests/map.test.mjs (S16) =====
+✔ completion survives a fresh store re-read (refresh) (38.610083ms)
+✔ duplicate completion is idempotent — one light, no count field (29.95325ms)
+✔ corrupt stored JSON recovers to empty (no throw) (0.209666ms)
+✔ partial payload without a version recovers to empty (drops any junk) (1.234166ms)
+✔ old version (v0) migrates and keeps the visited light (4.303ms)
+✔ complete reset clears all lights and persists (0.157459ms)
+✔ payload stores only a visited flag — no free text, no mood score (0.107625ms)
+✔ unknown scene id is refused (0.074958ms)
+✔ map view renders 4 scenes with lights, the privacy note, and reset (13.92ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 235.396709
+node --test exit=0
+
+===== npm test (baseline) =====
+ℹ tests 3
+ℹ pass 3
+ℹ fail 0
+===== npm run build =====
+build: copied src/{index.html,styles.css,app.js} -> dist/ (3 files)
+dist/:
+app.js
+index.html
+styles.css
+
+===== validate_map.py =====
+[PASS] regression: only expected files modified (S16 store/map/tests are new/untracked) — modified: ['TASKS.md']
+
+============================================================
+RESULT: 10/10 checks passed
+============================================================

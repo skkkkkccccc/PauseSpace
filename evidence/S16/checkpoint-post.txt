@@ -1,0 +1,33 @@
+PauseSpace — S16 post-session checkpoint
+Captured: 2026-08-04
+
+Post-session commit (HEAD): UNCHANGED from pre-session
+  c124db5e05d1ae7b6d5db4c214c78d3df3f33935
+  subject: Complete S15 Completion choices & support route
+  branch: main (tracking origin/main)
+
+S16 deliverables (uncommitted):
+  M  TASKS.md                       (S15 checked; S16 activated: prompt + criteria)
+  ?? src/state/progressStore.js     (new: completion lights; versioned store; reset; recovery; privacy note)
+  ?? src/views/Map.js               (new: non-judgmental lights + privacy note + reset)
+  ?? tests/map.test.mjs             (new: 9 tests)
+  ?? evidence/S16/                  (new: checkpoint-pre/post, map-checks.txt, validate_map.py)
+
+  (docs/DecisionLog.md and docs/CoBuildLog.md will also be modified when logs are updated.)
+
+NOT modified: S12 progress.mjs (reused, not changed), OA01 files (deferred),
+src/components, src/views (other), content/*, package.json, all earlier baseline files.
+
+Rollback to the pre-session checkpoint (nothing S16-related was committed):
+  git restore TASKS.md docs/DecisionLog.md docs/CoBuildLog.md
+  rm -f src/state/progressStore.js src/views/Map.js tests/map.test.mjs
+  rm -rf evidence/S16
+
+Acceptance: A1 (schema-validated completion lights; refresh persistence; full
+reset; corrupt/old-version recovery; stores only a visited flag — no free text /
+mood score) PASS; A2 (non-judgmental map + privacy note + reset; no
+scores/streaks/rankings) PASS — 9/9 tests, 10/10 validator, baseline npm test
+3/3, build clean. The manual gate (A3) is student-owned and OPEN — inspect
+localStorage, explain every stored field, demonstrate reset + corruption recovery.
+Private-browsing behavior is a real-browser manual check. S16 NOT complete. S17
+not started.
