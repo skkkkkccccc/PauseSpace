@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "reviewStatus": "pending-mentor-review",
+  "releaseBlocked": true,
+  "boundary": "PauseSpace is not emergency support. If you have an emergency, contact local emergency services directly.",
+  "phrases": [
+    { "id": "not-treatment", "text": "PauseSpace is a short, calm moment — not counselling, diagnosis, or treatment." },
+    { "id": "can-leave", "text": "You can stop at any time." },
+    { "id": "talk-to-someone", "text": "If you want to talk to someone, you can reach out to a trusted adult or your school." }
+  ],
+  "contacts": [
+    { "id": "trusted-adult", "label": "A trusted adult", "value": "<mentor-approved-contact>", "approved": false },
+    { "id": "school-support", "label": "School student-support contact", "value": "<mentor-approved-contact>", "approved": false }
+  ]
+}

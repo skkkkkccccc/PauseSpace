@@ -1,0 +1,21 @@
+PauseSpace — S15 pre-session checkpoint
+Captured: 2026-08-04
+
+Pre-session commit (S14 completion, HEAD at start of S15):
+  35b6293c725ca47be7180b2ab670d6947c307a83
+  subject: Complete S14 Accessible player & viewing modes
+  branch: main (tracking origin/main)
+
+Working tree at start of S15: clean.
+
+S14 verified: player tests 13/13 (node --test tests/player.test.js). S14 checkbox
+checked at this transition. Pre-S15 checkpoint (rollback target): 35b6293.
+
+FINDING: `content.zip` is now TRACKED — it was swept into the S14 commit (35b6293),
+the risk flagged at S14. Not modified in S15; recommend the user `git rm content.zip`
+after reviewing its contents. Listed under evidence/S15/completion-checks.txt.
+
+Note: S15 = Completion choices & support route. Support contacts require
+mentor/adult approval (decision D3) — content/support.json is created with
+reviewStatus=pending-mentor-review and releaseBlocked=true; release stays BLOCKED
+until the mentor approves. No fabricated approval.

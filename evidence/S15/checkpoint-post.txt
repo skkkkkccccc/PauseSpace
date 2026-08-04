@@ -1,0 +1,39 @@
+PauseSpace — S15 post-session checkpoint
+Captured: 2026-08-04
+
+Post-session commit (HEAD): UNCHANGED from pre-session
+  35b6293c725ca47be7180b2ab670d6947c307a83
+  subject: Complete S14 Accessible player & viewing modes
+  branch: main (tracking origin/main)
+
+S15 deliverables (uncommitted):
+  M  TASKS.md                       (S14 checked; S15 activated: prompt + criteria)
+  ?? content/support.json           (new: static, non-emergency, non-diagnostic; release BLOCKED)
+  ?? src/views/Completion.js        (new: return/replay/find-support/exit; support route)
+  ?? tests/completion.test.mjs      (new: 8 tests)
+  ?? evidence/S15/                  (new: checkpoint-pre/post, completion-checks.txt, validate_completion.py)
+
+  (docs/DecisionLog.md and docs/CoBuildLog.md will also be modified when logs are updated.)
+
+NOT modified: OA01 files (deferred), src/components, src/views (other), src/state,
+src/data, content/*.json scenes, package.json, all earlier baseline files.
+
+Support release status: BLOCKED — content/support.json reviewStatus=pending-mentor-review
+and releaseBlocked=true. Contacts are placeholders (<mentor-approved-contact>).
+Release requires mentor/adult approval (decision D3) — NOT fabricated.
+
+FINDING: content.zip is tracked (swept into S14 commit 35b6293). Confirmed benign
+— a macOS zip snapshot of content/ (scene JSONs + schema + __MACOSX metadata), no
+secrets/PII, but redundant. Recommend `git rm content.zip` + commit.
+
+Rollback to the pre-session checkpoint (nothing S15-related was committed):
+  git restore TASKS.md docs/DecisionLog.md docs/CoBuildLog.md
+  rm -f content/support.json src/views/Completion.js tests/completion.test.mjs
+  rm -rf evidence/S15
+
+Acceptance: A1 (completion branches for every scene; independent of tracking; exit
+always) PASS; A2 (non-emergency support; unapproved not shown; missing handled;
+toggle) PASS — 8/8 tests, 12/12 validator, baseline npm test 3/3, build clean.
+Manual gate (A3) OPEN — student+mentor review of every support phrase + D3 mentor
+approval of contacts before release; verify the user can always leave. S15 NOT
+complete. S16 not started.

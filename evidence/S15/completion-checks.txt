@@ -1,0 +1,58 @@
+########## S15 COMPLETION CHOICES & SUPPORT ROUTE (captured 2026-08-04) ##########
+node: v24.18.0
+
+===== node --test tests/completion.test.mjs (S15) =====
+✔ completion view offers return, replay, find-support, and exit for every scene (1.19ms)
+✔ exit/leave is always present (no forced completion) (0.083291ms)
+✔ completion actions are independent of tracking (no streak/score/rank) (0.378084ms)
+✔ support content is non-emergency and not yet approved (release blocked) (0.093291ms)
+✔ unapproved support is not shown in full (release blocked until mentor approval) (0.090917ms)
+✔ approved support renders boundary + phrases + approved contacts only (0.102125ms)
+✔ missing support renders a safe message (no throw) (0.049042ms)
+✔ find-support toggles the support panel (aria-expanded) (0.063667ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 65.913167
+node --test exit=0
+
+===== npm test (baseline) =====
+ℹ tests 3
+ℹ pass 3
+ℹ fail 0
+===== npm run build =====
+build: copied src/{index.html,styles.css,app.js} -> dist/ (3 files)
+dist/:
+app.js
+index.html
+styles.css
+
+===== validate_completion.py =====
+[PASS] regression: only expected files modified (S15 support/view/tests are new/untracked) — modified: ['TASKS.md']
+
+============================================================
+RESULT: 12/12 checks passed
+============================================================
+
+===== content.zip listing (swept into S14 commit 35b6293; recommend git rm) =====
+Archive:  content.zip
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+        0  08-03-2026 17:14   content/
+      163  08-03-2026 17:14   __MACOSX/._content
+     2079  08-03-2026 17:14   content/empty-classroom.json
+      163  08-03-2026 17:14   __MACOSX/content/._empty-classroom.json
+     1998  08-03-2026 17:14   content/own-room.json
+      163  08-03-2026 17:14   __MACOSX/content/._own-room.json
+     2078  08-03-2026 17:14   content/sports-field.json
+      163  08-03-2026 17:14   __MACOSX/content/._sports-field.json
+     2663  07-30-2026 15:51   content/schema.json
+      163  07-30-2026 15:51   __MACOSX/content/._schema.json
+     2055  08-03-2026 17:14   content/exam-room.json
+      163  08-03-2026 17:14   __MACOSX/content/._exam-room.json
+---------                     -------
+    11851                     12 files

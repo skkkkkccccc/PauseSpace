@@ -13,12 +13,12 @@ Build PauseSpace as a privacy-first, static, scene-based attention-reset Web App
 - Do not implement a future session before the current session passes acceptance.
 
 ## Current Unit
-Unit code: S14
-Unit focus: Accessible player & viewing modes
+Unit code: S15
+Unit focus: Completion choices & support route
 Current prompt:
 
 ```markdown
-# S14 - Accessible player & viewing modes
+# S15 - Completion choices & support route
 
 ## Role
 Act as the implementation partner for this bounded PauseSpace InnovationLab session. Preserve student ownership and the approved static, privacy-first architecture.
@@ -27,31 +27,31 @@ Act as the implementation partner for this bounded PauseSpace InnovationLab sess
 Open README.md, TASKS.md, docs/ProjectPlan.md, docs/Architecture.md, docs/DecisionLog.md, the listed in-scope files, and current tests. Inspect before proposing changes.
 
 ## Current State
-Confirm the repository checkpoint and report what already works, failing tests, known issues, and active task S14 / P5. Do not assume missing work is complete.
+Confirm the repository checkpoint and report what already works, failing tests, known issues, and active task S15 / P5. Do not assume missing work is complete.
 
 ## Session Objective
-Implement audio controls plus explicit eyes-open / eyes-closed choice, reduced motion, errors, keyboard use and safe reset.
+Implement return, replay, and find-support actions with non-emergency boundary.
 
 ## Scope
-In scope: src/components/AudioPlayer.js; src/components/ModePicker.js; tests/player.test.js. Make only changes required for “Accessible player & viewing modes”. Preserve all working behavior outside this boundary.
+In scope: src/views/Completion.js; content/support.json. Make only changes required for “Completion choices & support route”. Preserve all working behavior outside this boundary.
 
 ## Requirements
-Implement play/pause/restart/progress/time/transcript/error controls; add reversible eyes-open/eyes-closed presentation choices; honor keyboard, focus, reduced-motion, and no-autoplay rules. Keep the four authoritative scenes and the approved static, local-first, non-diagnostic boundary; use synthetic or properly anonymized data only.
+Implement return, replay, and find-support choices; keep support content static, locally reviewed, non-emergency, and independent of completion tracking. Keep the four authoritative scenes and the approved static, local-first, non-diagnostic boundary; use synthetic or properly anonymized data only.
 
 ## Implementation Sequence
 1) Verify baseline and tests. 2) Create a checkpoint. 3) State the smallest runnable change. 4) Implement in small steps. 5) Run focused tests after each step. 6) Run the session acceptance checks. 7) Update TASKS, Decision Log and Co-build Log.
 
 ## Files
-Create or modify only: src/components/AudioPlayer.js; src/components/ModePicker.js; tests/player.test.js. Explicitly preserve deployed assets, approved scripts, unrelated styles, test evidence and prior decisions.
+Create or modify only: src/views/Completion.js; content/support.json. Explicitly preserve deployed assets, approved scripts, unrelated styles, test evidence and prior decisions.
 
 ## Tests and Acceptance Criteria
-Acceptance gate: Player and both reversible modes work on mobile and keyboard; no autoplay or sensory-deprivation implication. Test every player transition, missing audio, rapid input, keyboard path, both viewing modes, reset, background/resume, and reduced-motion behavior on mobile. Report exact commands, expected versus actual results, manual checks, and evidence paths. Never invent passing results.
+Acceptance gate: All branches work; support content is locally appropriate before release. Run all completion branches from every scene; test missing/unapproved support content; save local reviewer approval or keep release blocked. Report exact commands, expected versus actual results, manual checks, and evidence paths. Never invent passing results.
 
 ## Evidence to Save
-Save dated evidence under evidence/S14/: relevant screenshots or recordings, command/test output, reviewed artifacts, defect references, and the pre/post-session checkpoint IDs. Do not save personal or identifying data.
+Save dated evidence under evidence/S15/: relevant screenshots or recordings, command/test output, reviewed artifacts, defect references, and the pre/post-session checkpoint IDs. Do not save personal or identifying data.
 
 ## Student Manual Work
-Student operates the complete control set with keyboard and touch and explains why viewing mode never changes safety claims. The student must review every diff and write the final Co-build Log decision in their own words.
+Student reviews every support phrase with the mentor and verifies the user can always leave. The student must review every diff and write the final Co-build Log decision in their own words.
 
 ## Security and Safety
 Do not collect names, mental-health histories, family details, mood scores, microphone data, analytics identifiers, or secrets. Do not add diagnosis, treatment, emergency promises, forced breathing, autoplay, or unreviewed support contacts.
@@ -61,12 +61,12 @@ Do not add frameworks, backend, login, AI runtime chat, cloud sync, trackers, st
 
 ## TASKS.md Session Activation
 Before implementation, update only the editable fields in `TASKS.md`:
-- `Unit code: S14`
-- `Unit focus: Accessible player & viewing modes`
-- `Current prompt: paste this complete S14 prompt only`
+- `Unit code: S15`
+- `Unit focus: Completion choices & support route`
+- `Current prompt: paste this complete S15 prompt only`
 - Replace the three placeholder acceptance lines with this session's observable acceptance criteria.
 
-Do not recreate or overwrite `TASKS.md`. Preserve the full S01-S22 checklist, completed checkmarks, known issues, and last test evidence. After acceptance passes, mark only S14 complete, record actual evidence, and set the next unit only as preparation.
+Do not recreate or overwrite `TASKS.md`. Preserve the full S01-S22 checklist, completed checkmarks, known issues, and last test evidence. After acceptance passes, mark only S15 complete, record actual evidence, and set the next unit only as preparation.
 
 ## Checkpoint and Rollback
 Record the pre-session checkpoint identifier. If acceptance fails, keep the last runnable state, log the defect, and provide the exact rollback path without erasing evidence.
@@ -75,13 +75,13 @@ Record the pre-session checkpoint identifier. If acceptance fails, keep the last
 List changed files; summarize decisions; show tests and manual checks; identify limitations and unresolved risks; update traceability; name the next safe step without implementing it.
 
 ## Stop Condition
-Stop when S14 acceptance criteria pass and evidence is saved. Do not begin the next session.
+Stop when S15 acceptance criteria pass and evidence is saved. Do not begin the next session.
 ```
 
 ## Acceptance Criteria for Current Unit
-- A1 — Player control surface: `src/components/AudioPlayer.js` renders play/pause/restart/progress/time/transcript/error controls from the player FSM state; **user-initiated only (no autoplay)**; missing audio → error state; exit always available (no forced completion). (Auto-verifiable.)
-- A2 — Viewing modes + accessibility: `src/components/ModePicker.js` provides **reversible eyes-open/eyes-closed** modes (presentation only — **never changes safety claims**); keyboard-operable controls (`<button type="button">` + `data-action`/`aria`); reduced-motion honored; safe reset; background pauses with no auto-resume. (Auto-verifiable; mobile+keyboard manual check.)
-- A3 — Evidence + review: tests + a manual mobile+keyboard control exercise saved under `evidence/S14/`; the student operates the full control set with keyboard+touch and explains why viewing mode never changes safety claims — student-owned manual gate. (Manual, student-owned gate.)
+- A1 — Completion branches: `src/views/Completion.js` offers return / replay / find-support / exit for every scene; the choices are **independent of completion tracking** (no streak/score/rank); exit is always available (no forced completion). (Auto-verifiable.)
+- A2 — Support route + release gate: `content/support.json` is static, **non-emergency and non-diagnostic**; **unapproved support is not shown** (release blocked until mentor/adult approval — decision D3); missing support is handled safely; find-support toggles the panel. (Auto-verifiable; mentor approval is the manual gate.)
+- A3 — Evidence + review: tests + the support-content review saved under `evidence/S15/`; the student reviews every support phrase with the mentor and verifies the user can always leave — student/mentor-owned manual gate. **Support release stays BLOCKED until mentor approval (D3).** (Manual, student-owned gate.)
 
 ## Optional Extension Units
 - [ ] OA01 - AI-generated narration production and curation
@@ -100,7 +100,7 @@ Stop when S14 acceptance criteria pass and evidence is saved. Do not begin the n
 - [x] S11
 - [x] S12
 - [x] S13
-- [ ] S14
+- [x] S14
 - [ ] S15
 - [ ] S16
 - [ ] S17
@@ -115,8 +115,8 @@ Stop when S14 acceptance criteria pass and evidence is saved. Do not begin the n
 - Locally approved support contacts; owner: mentor/adult reviewer; next action: approve before S15 release gate.
 
 ## Last Test Evidence
-- Automated (S14): `evidence/S14/player-checks.txt` — `node --test tests/player.test.js` → **13/13 pass** (modes valid/reversible; control per state with no autoplay; rapid input consistent; missing-audio error; keyboard buttons; reset; background pause/no auto-resume; reduced-motion; exit always; no autoplay/TTS); `npm test` 3/3; `npm run build` OK (dist unchanged); validator `evidence/S14/validate_player.py` = 10/10.
-- Automated (preserved): S13 7/7; S12 16/16; S11 3/3 + clean install/lint/build/start; S10 16/16; S09 12/12; S08 12/12; S07 11/11; S06 22/22; S05 12/12; S04 10/10; S03 14/14; S02 14/14; S01 12/12.
-- Content/data validation (S14): player controls derive from the S12 FSM; viewing modes are reversible and never change the safety/non-diagnostic note; no `<audio>` element / no autoplay / no runtime TTS in S14.
-- Accessibility/device: keyboard-operable buttons (`type=button`, `data-action`, `aria-label`); reduced-motion carried; formal mobile+AT exercise is the student manual gate.
-- Manual demo path: **Manual gate (A3) OPEN** — the student operates the full control set with keyboard+touch and explains why viewing mode never changes safety claims. Note: `npm test` runs the src/test smoke only; S14 player tests run via `node --test tests/player.test.js`. Untracked `content.zip` flagged (not committed).
+- Automated (S15): `evidence/S15/completion-checks.txt` — `node --test tests/completion.test.mjs` → **8/8 pass** (return/replay/find-support/exit for every scene; exit always; independent of tracking; support non-emergency + release-blocked; unapproved not shown; approved renders approved-only; missing support safe; find-support toggle); `npm test` 3/3; `npm run build` OK (dist unchanged); validator `evidence/S15/validate_completion.py` = 12/12.
+- Automated (preserved): S14 13/13; S13 7/7; S12 16/16; S11 3/3 + clean install/lint/build/start; S10 16/16; S09 12/12; S08 12/12; S07 11/11; S06 22/22; S05 12/12; S04 10/10; S03 14/14; S02 14/14; S01 12/12.
+- Content/data validation (S15): support content static, non-emergency, non-diagnostic; `reviewStatus=pending-mentor-review`, `releaseBlocked=true`; no real contacts (placeholders only); completion choices independent of tracking.
+- Accessibility/device: completion buttons are keyboard-operable (`type=button`, `data-action`, `aria-label`, `aria-expanded`); formal device check is the student manual gate.
+- Manual demo path: **Manual gate (A3) OPEN + D3** — student+mentor review every support phrase; mentor approves support contacts (D3) before release; verify the user can always leave. Support release stays BLOCKED until D3. Note: `npm test` runs src/test smoke only; S15 tests run via `node --test tests/completion.test.mjs`. `content.zip` is tracked (benign content/ snapshot swept into S14 commit `35b6293`); recommend `git rm`.
