@@ -1,0 +1,28 @@
+########## S14 ACCESSIBLE PLAYER & VIEWING MODES (re-run; 2026-08-04) ##########
+===== node --test tests/player.test.js =====
+✔ both viewing modes are valid, default eyes-open, and reversible (1.599792ms)
+✔ mode picker renders both options, carries reduced-motion, and keeps the safety note in every mode (0.198875ms)
+✔ primary control is Play in idle/ready — user-initiated, no autoplay (0.10475ms)
+✔ primary control reflects each FSM state (0.08075ms)
+✔ rapid transition sequence keeps controls consistent (0.239292ms)
+✔ missing audio renders an error state with no start/play control (0.173458ms)
+✔ valid audio renders a Play (start) control — no autoplay (0.127083ms)
+✔ every control is a keyboard-operable button (0.164333ms)
+✔ reset returns the FSM to idle (0.068708ms)
+✔ background pauses a playing scene; resume does NOT auto-resume (0.236ms)
+✔ reduced-motion is carried on the player surface (0.226042ms)
+✔ exit control is always rendered (no forced completion) (0.066833ms)
+✔ no autoplay attribute and no TTS call in the rendered player (0.204709ms)
+ℹ tests 13
+ℹ pass 13
+ℹ fail 0
+===== npm test =====
+ℹ tests 3
+ℹ pass 3
+ℹ fail 0
+===== npm run build =====
+build: copied src/{index.html,styles.css,app.js} -> dist/ (3 files)
+===== validate_player.py =====
+============================================================
+RESULT: 10/10 checks passed
+============================================================

@@ -1,0 +1,35 @@
+PauseSpace — S14 post-session checkpoint
+Captured: 2026-08-04
+
+Post-session commit (HEAD): UNCHANGED from pre-session
+  81251ccdb946d14225bfa6f1e10ce4b7d343aba0
+  subject: Complete S13 Home and scene views
+  branch: main (tracking origin/main)
+
+S14 deliverables (uncommitted):
+  M  TASKS.md                          (S13 checked; S14 activated: prompt + criteria)
+  ?? src/components/AudioPlayer.js      (new: control surface; no autoplay; missing-audio error)
+  ?? src/components/ModePicker.js       (new: reversible eyes-open/eyes-closed; never changes safety claims)
+  ?? tests/player.test.js               (new: 13 tests)
+  ?? evidence/S14/                      (new: checkpoint-pre/post, player-checks.txt, validate_player.py)
+
+  (docs/DecisionLog.md and docs/CoBuildLog.md will also be modified when logs are updated.)
+
+NOT modified: OA01 files (deferred/untouched), src/views, src/state, src/data,
+src/app.js, content/*, package.json, all earlier baseline files. No <audio>
+element, no autoplay attribute, no runtime TTS in S14 (control surface only).
+
+FINDING: untracked `content.zip` remains in the tree (not created by me; not part
+of any session). Do NOT commit it — remove or .gitignore it.
+
+Rollback to the pre-session checkpoint (nothing S14-related was committed):
+  git restore TASKS.md docs/DecisionLog.md docs/CoBuildLog.md
+  rm -rf src/components/AudioPlayer.js src/components/ModePicker.js tests/player.test.js evidence/S14
+
+Acceptance: A1 (player control surface; no autoplay; missing-audio error; exit
+always) PASS; A2 (reversible modes that never change safety claims; keyboard;
+reduced-motion; reset; background pause/no auto-resume) PASS — 13/13 player tests,
+10/10 validator, baseline npm test 3/3, build clean. The manual gate (A3) is
+student-owned and OPEN — operate the full control set with keyboard+touch and
+explain why viewing mode never changes safety claims. S14 NOT complete. S15 not
+started. No runtime TTS.

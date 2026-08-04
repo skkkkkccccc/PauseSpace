@@ -1,0 +1,21 @@
+PauseSpace — S14 pre-session checkpoint
+Captured: 2026-08-04
+
+Pre-session commit (S13 completion, HEAD at start of S14):
+  81251ccdb946d14225bfa6f1e10e4b7d343aba0
+  subject: Complete S13 Home and scene views
+  branch: main (tracking origin/main)
+
+Working tree at start of S14: clean except an UNTRACKED `content.zip`
+(not created by me; not part of any session) — flagged, not touched/committed.
+
+S13 verified: view tests 7/7 (node --test tests/views.test.mjs). The S13
+validate_views.py shows 12/13 = the documented transition-sensitive regression
+false positive (diffs vs pre-S13 checkpoint 2d80457); not a real regression.
+S13 checkbox checked at this transition.
+Pre-S14 checkpoint (rollback target): 81251cc.
+
+Note: S14 = Accessible player & viewing modes. No real audio files yet (OA01 TTS
+deferred; student recordings not produced) — the player is a control surface
+tested via the S12 FSM + mode logic; missing-audio -> error state. No autoplay,
+no runtime TTS.
