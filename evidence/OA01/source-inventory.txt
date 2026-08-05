@@ -1,0 +1,30 @@
+OA01 supplied-audio source inventory (after S17)
+Captured: 2026-08-05  (read-only inspection; no file was modified)
+
+Contract location (prompts/PauseSpace_OA01_After_S17_Supplied_Audio_Prompt.md):
+  ./asset/audio/   (singular)
+Actual repository location (canonical, matches scene JSON audio.src):
+  ./assets/audio/  (plural)
+Discrepancy: singular vs plural — a typo in the contract/user path. The four
+expected named MP3s ARE present at the canonical assets/audio/ directory. Per the
+contract ("Do not ... move, rename ..."), the files are NOT relocated/duplicated;
+assets/audio/ is treated as the authoritative location. No asset/audio/ dir exists.
+
+Inventory (exactly four expected files; no symlinks; no unexpected executables):
+  assets/audio/empty-classroom.mp3  size=4321676  tracked=yes
+  assets/audio/exam-room.mp3        size=4321664  tracked=yes
+  assets/audio/own-room.mp3         size=4321667  tracked=yes
+  assets/audio/sports-field.mp3     size=4321670  tracked=yes
+
+Also present (pre-existing, not supplied audio, not modified):
+  assets/audio/README.md, SCENE_AUDIO_NOTES.txt, audio-manifest.generated.json, generated/
+  (content.zip tracked at repo root from an earlier accidental sweep-in; benign, not modified.)
+
+Commands (read-only): ls -la assets/audio/ ; git ls-files 'assets/audio/*.mp3' ; shasum -a 256 ...
+Exit status: 0 for all. Files preserved in place.
+
+Hash reconciliation note (sports-field.mp3):
+- First shasum read at the start of OA01 returned ...c9095bf0... for sports-field.mp3.
+- A later read returned ...c9015bf0..., stable across two consecutive runs, and `git diff HEAD` shows NO change to any mp3 (so c9015 matches the committed file).
+- The agent did NOT modify any mp3 (all commands were read-only). The first read appears to have been a transient/anomalous value.
+- The manifest and checksums.sha256 record the verified stable current hash (...c9015bf0...) for sports-field.mp3.

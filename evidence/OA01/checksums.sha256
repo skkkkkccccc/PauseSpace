@@ -1,0 +1,6 @@
+# OA01 supplied-audio SHA-256 checksums (read-only; 2026-08-05)
+# Command: shasum -a 256 assets/audio/{empty-classroom,exam-room,own-room,sports-field}.mp3
+2ce372d107fbfc0ffd64f959cbfd5e470a50a141eccd87783795512cd98f61d2  assets/audio/empty-classroom.mp3
+d11f5bd7e58b1cc92e4fa6b608c2a0955580702877d2a59b47f8cba66f641210  assets/audio/exam-room.mp3
+f291d7051cbcccbdd674a49c51278459d7d468bd7ed615826d6f892368e0becc  assets/audio/own-room.mp3
+585d14aced3a523333cbc2fd3113be502bde99ec9015bf0ca389066674400fe3  assets/audio/sports-field.mp3

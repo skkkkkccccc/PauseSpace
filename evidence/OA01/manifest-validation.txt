@@ -1,0 +1,7 @@
+OA01 manifest validation (re-run; 2026-08-05)
+File: assets/audio/audio-manifest.placeholder.json
+exam-room: role=ambient, hashMatchesFile=true, reviewStatus=pending-human-listening
+sports-field: role=ambient, hashMatchesFile=true, reviewStatus=pending-human-listening
+own-room: role=ambient, hashMatchesFile=true, reviewStatus=pending-human-listening
+empty-classroom: role=ambient, hashMatchesFile=true, reviewStatus=pending-human-listening
+RESULT: manifest_valid=true
