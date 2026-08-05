@@ -1,0 +1,18 @@
+PauseSpace — S17 pre-session checkpoint
+Captured: 2026-08-05
+
+Pre-session commit (S16 completion, HEAD at start of S17):
+  55e1f2c2ec5641f5d073ed8301632923bc2f0ce3
+  subject: Complete S16 Pause map & local privacy controls
+  branch: main (tracking origin/main)
+
+Working tree at start of S17: clean.
+
+S16 verified: map tests 9/9 (node --test tests/map.test.mjs). S16 checkbox
+checked at this transition. Pre-S17 checkpoint (rollback target): 55e1f2c.
+
+Note: S17 = PWA and demo resilience (public/manifest.webmanifest + public/sw.js).
+The PWA shell is "Recommended (optional)" per the baseline (Traceability B-12).
+SW logic is tested via a node:vm mock; real offline/update rehearsal on a phone is
+the student manual gate. The manifest icon files are placeholders pending production
+(out of S17 scope). No runtime TTS.

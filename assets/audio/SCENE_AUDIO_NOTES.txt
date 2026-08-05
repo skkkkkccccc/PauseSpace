@@ -1,0 +1,23 @@
+PauseSpace scene-specific audio design
+
+empty-classroom.mp3
+- Quiet HVAC-like room tone
+- Spacious empty-room resonance
+- Restrained warm ambient pad
+
+exam-room.mp3
+- Near-silent room tone
+- Very faint paper/pencil-like textures
+- Minimal neutral ambient pad
+
+own-room.mp3
+- Warm familiar indoor room tone
+- Soft home-like harmony
+- Sparse delicate chime texture
+
+sports-field.mp3
+- Open-air breeze
+- Very distant bird-like details
+- Airy spacious ambient pad
+
+All files retain the JSON duration and segment entry points: 0, 30, 120, and 165 seconds.

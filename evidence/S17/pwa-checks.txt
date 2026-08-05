@@ -1,0 +1,38 @@
+########## S17 PWA AND DEMO RESILIENCE (captured 2026-08-05) ##########
+node: v24.18.0
+
+===== node --test tests/sw.test.mjs (S17) =====
+✔ first load / install caches the app shell + skipWaiting (2.222ms)
+✔ second load: install keeps the cache (idempotent) (1.432625ms)
+✔ offline: previously-loaded shell is served (0.402416ms)
+✔ missing asset offline returns a safe 503 (no throw) (0.377833ms)
+✔ update: a new release is not trapped — old cache cleared, new present, clients.claim (0.851583ms)
+✔ non-GET requests are ignored by the fetch handler (0.335834ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 67.548375
+node --test exit=0
+
+===== npm test (baseline) =====
+ℹ tests 3
+ℹ pass 3
+ℹ fail 0
+===== npm run build =====
+build: copied src/{index.html,styles.css,app.js} -> dist/ (3 files)
+dist/:
+app.js
+index.html
+styles.css
+
+===== validate_pwa.py =====
+[PASS] no secret pattern in manifest + sw
+[PASS] regression: only expected files modified (S17 manifest/sw/tests are new/untracked) — modified: ['TASKS.md']
+
+============================================================
+RESULT: 17/17 checks passed
+============================================================

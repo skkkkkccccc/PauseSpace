@@ -1,0 +1,36 @@
+PauseSpace — S17 post-session checkpoint
+Captured: 2026-08-05
+
+Post-session commit (HEAD): UNCHANGED from pre-session
+  55e1f2c2ec5641f5d073ed8301632923bc2f0ce3
+  subject: Complete S16 Pause map & local privacy controls
+  branch: main (tracking origin/main)
+
+S17 deliverables (uncommitted):
+  M  TASKS.md                       (S16 checked; S17 activated: prompt + criteria)
+  ?? public/manifest.webmanifest    (new: PWA install metadata; non-diagnostic; original colors)
+  ?? public/sw.js                   (new: conservative app-shell cache; offline; update-safe)
+  ?? tests/sw.test.mjs              (new: 6 vm-mock SW tests)
+  ?? evidence/S17/                  (new: checkpoint-pre/post, pwa-checks.txt, validate_pwa.py)
+
+  (docs/DecisionLog.md and docs/CoBuildLog.md will also be modified when logs are updated.)
+
+NOT modified: OA01 files (deferred), src/*, content/*, package.json, serve.mjs,
+all earlier baseline files. The manifest/sw are NOT yet served (serve.mjs serves
+dist/ only) and the manifest icons are placeholders pending production — wiring
+is a later session. No runtime TTS.
+
+FINDING: untracked `assets/audio/audio place folder/` (with a space in the name)
+appeared — not created by me; not part of S17. Do NOT commit; remove or .gitignore.
+(content.zip also still tracked from earlier; recommend `git rm`.)
+
+Rollback to the pre-session checkpoint (nothing S17-related was committed):
+  git restore TASKS.md docs/DecisionLog.md docs/CoBuildLog.md
+  rm -rf public tests/sw.test.mjs evidence/S17
+
+Acceptance: A1 (valid, non-diagnostic manifest; original colors; placeholder
+icons documented) PASS; A2 (conservative shell cache; offline shell; missing-asset
+503; versioned cache + skipWaiting + cleanup — new release not trapped) PASS — 6/6
+SW tests, 17/17 validator, baseline npm test 3/3, build clean. The manual gate
+(A3) is student-owned and OPEN — perform the offline + update rehearsal on a phone
+and record the exact recovery steps. S17 NOT complete. S18 not started.
