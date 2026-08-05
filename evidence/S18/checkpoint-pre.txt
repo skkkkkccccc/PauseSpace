@@ -1,0 +1,16 @@
+PauseSpace — S18 pre-session checkpoint
+Captured: 2026-08-05
+
+Pre-session commit (OA01 parked; S17 complete; HEAD at start of S18):
+  6c2acd1  wip: park OA01 supplied-audio validation (ambient placeholder; human listening pending)
+  branch: main (tracking origin/main)
+
+Working tree at start of S18: CLEAN (OA01 supplied-audio work was committed to
+isolate it; OA01 remains deferred/unchecked — human listening still pending).
+
+S17 verified: sw tests 6/6 (committed a4953ba). S18 = Automated and device testing.
+Pre-S18 checkpoint (rollback target): 6c2acd1.
+
+Note: S18 runs the accumulated automated suites (node:test across tests/) + npm
+test + lint + build + a repo secret scan. E2E / accessibility(AT) / browser-matrix
+/ on-device tests require a browser/device and remain student manual gates.

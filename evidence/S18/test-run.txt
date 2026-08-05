@@ -1,0 +1,70 @@
+########## S18 AUTOMATED TEST RUN (captured 2026-08-05) ##########
+Environment: node v24.18.0 | npm 11.16.0 | Darwin 25.2.0
+
+===== 1) node --test tests/*.test.mjs tests/*.test.js (all suites) =====
+✔ interrupted playback: playing -> pause -> resume (0.264917ms)
+✔ invalid transition returns a safe error, no throw (0.196875ms)
+✔ reset returns to idle from any state (0.162416ms)
+✔ versioned round-trip (save -> load) (3.606167ms)
+✔ stale-version payload migrates forward (drops non-versioned fields) (0.238917ms)
+✔ malformed stored JSON fails safely (0.427ms)
+✔ future-version payload signals reset (0.165834ms)
+✔ reset clears stored progress (8.304583ms)
+✔ valid scene passes (1.491541ms)
+✔ missing required field fails safely (no throw) (0.246916ms)
+✔ malformed duration fails safely (3.40825ms)
+✔ malformed non-object input fails safely (no throw) (0.181375ms)
+✔ missing exit language fails safely (0.253959ms)
+✔ loadScenes aggregates valid + failed (0.249042ms)
+✔ exactly the four expected supplied MP3s exist at assets/audio/ (1.428666ms)
+✔ each scene JSON maps deterministically to assets/audio/<id>.mp3 and the file exists (4.504833ms)
+✔ manifest placeholder validates: 4 tracks, valid roles, hashes match files (27.25675ms)
+✔ transcripts remain available for every scene (independent of audio) (2.560125ms)
+✔ no track is selected for release (all pending human listening) (3.124916ms)
+✔ first load / install caches the app shell + skipWaiting (4.084959ms)
+✔ second load: install keeps the cache (idempotent) (2.208208ms)
+✔ offline: previously-loaded shell is served (0.57225ms)
+✔ missing asset offline returns a safe 503 (no throw) (11.127875ms)
+✔ update: a new release is not trapped — old cache cleared, new present, clients.claim (5.001083ms)
+✔ non-GET requests are ignored by the fetch handler (12.389792ms)
+✔ four cards render from data, each with title + open control (2.017ms)
+✔ homeView renders all four cards from data (no error state) (1.656541ms)
+✔ no scene-specific copy is hard-coded in view/component source (0.703959ms)
+✔ malformed content fails visibly (error state, no throw) (0.558875ms)
+✔ empty state when there are no scenes (0.093708ms)
+✔ safe text insertion (escaping) (0.081583ms)
+✔ detail shows audio metadata but no playback element (no runtime audio/TTS) (0.139292ms)
+ℹ tests 73
+ℹ suites 0
+ℹ pass 73
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 456.726833
+node --test exit=
+
+===== 2) npm test (src/test smoke) =====
+ℹ tests 3
+ℹ pass 3
+ℹ fail 0
+===== 3) npm run lint =====
+
+lint: clean — no secrets, external URLs, trackers, or medical claims in src.
+===== 4) npm run build =====
+build: copied src/{index.html,styles.css,app.js} -> dist/ (3 files)
+dist/:
+app.js
+index.html
+styles.css
+
+===== 5) repo secret scan (excludes .git, node_modules, dist) =====
+evidence/S17/validate_pwa.py:21:SECRET = re.compile(r"AKIA[0-9A-Z]{16}|-----BEGIN|sk-[A-Za-z0-9]{20}")
+evidence/S11/validate_repo.py:51:SECRET = re.compile(r"password|api[_-]?key|bearer|authorization\s*:|AKIA[0-9A-Z]{16}|-----BEGIN")
+evidence/S16/validate_map.py:19:SECRET = re.compile(r"AKIA[0-9A-Z]{16}|-----BEGIN|sk-[A-Za-z0-9]{20}")
+evidence/S14/validate_player.py:19:SECRET = re.compile(r"AKIA[0-9A-Z]{16}|-----BEGIN|sk-[A-Za-z0-9]{20}")
+evidence/S13/validate_views.py:20:SECRET = re.compile(r"AKIA[0-9A-Z]{16}|-----BEGIN|sk-[A-Za-z0-9]{20}")
+evidence/S12/validate_contracts.py:21:SECRET = re.compile(r"password|api[_-]?key|bearer|authorization\s*:|AKIA[0-9A-Z]{16}|-----BEGIN")
+evidence/OA01/validate-oa01.py:23:REAL_SECRET = re.compile(r"AKIA[0-9A-Z]{16}|-----BEGIN|sk-[A-Za-z0-9]{20}")
+evidence/S15/validate_completion.py:21:SECRET = re.compile(r"AKIA[0-9A-Z]{16}|-----BEGIN|sk-[A-Za-z0-9]{20}")
+src/tools/lint.mjs:7:  { re: /password|api[_-]?key|bearer|authorization\s*:|-----BEGIN|AKIA[0-9A-Z]{16}/i, why: "possible secret/credential" },
